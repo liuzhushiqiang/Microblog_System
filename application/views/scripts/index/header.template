@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>thinksns</title>
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+  <script type="text/javascript" src="js/home.js"></script>
+</head>
+<body>
+  <div id="header">
+    <div class="header_content">
+      <div class="header_nav">
+        <a href="#"> 
+          <img src="image/home_header_logo.png" alt="logo" />
+        </a>
+          <ul>
+            <li onmouseover="header_nav_hover(this)" onmouseout="header_nav_out(this)" class="header_current_page">
+            <a href="#" target="_self">首页</a></li>
+            <li onmouseover="header_nav_hover(this)" onmouseout="header_nav_out(this)"><a href="#" target="_self">微吧</a></li>
+            <li onmouseover="header_nav_hover(this)" onmouseout="header_nav_out(this)"><a href="#" target="_self">频道</a></li>
+            <li onmouseover="header_nav_hover(this)" onmouseout="header_nav_out(this)"><a href="#" target="_self">应用商店</a></li>
+            <li onmouseover="header_nav_hover(this)" onmouseout="header_nav_out(this)"><a href="#" target="_self">黑板报</a></li>
+            <li onmouseover="show_apps_list(this)" onmouseout="hide_apps_list(this)" id="apps"><a href="#" target="_self">应用</a>
+              <div class="header_apps_list" id="header_apps_list">
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                更多应用
+              </a>
+            </div>
+          </div></li>
+          </ul>
+          
+      </div>
+      <div class="header_right">
+        <div class="header_search">
+          <form action="#" method="get">
+            <input class= "search_text" type="text" value="搜微博 / 昵称 / 标签" onfocus="this.value = ''" onblur="this.value = '搜微博 / 昵称 / 标签'"/>
+            <input class="search_button" type="image" src="image/home_header_search.png" alt="submit">
+          </form>
+        </div>
+        <ul>
+            <li onmouseover="header_nav_hover(this)" onmouseout="header_nav_out(this)"><a href="#" target="_self">刘朱石强</a></li>
+            <li onmouseover="show_message_list(this)" onmouseout="hide_message_list(this)" id="message"><a href="#" target="_self">消息</a><div class="header_message_list" id="header_message_list">
+            <div class="header_list_a_line">
+              <a href="#">
+              @提到我的
+              </a>
+            </div>
+            <div class="header_list_a_line">
+              <a href="#">
+              @提到我的
+              </a>
+            </div >
+            <div class="header_list_a_line">
+              <a href="#">
+              @提到我的
+              </a>
+            </div>
+            <div class="header_list_a_line">
+              <a href="#">
+              @提到我的
+              </a>
+            </div>
+            <div class="header_list_a_line">
+              <a href="#">
+              @提到我的
+              </a>
+            </div>
+            <div class="header_list_a_line">
+              <a href="#">
+              @提到我的
+              </a>
+            </div>
+
+          </div></li>
+            <li onmouseover="show_account_list(this)" onmouseout="hide_account_list(this)" id="account"><a href="#" target="_self">账号</a><div class="header_account_list" id="header_account_list">
+            <div>
+              <!--
+              未完, 应用列表需要动态添加
+            -->
+            </div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

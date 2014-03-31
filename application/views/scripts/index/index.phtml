@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>thinksns</title>
+  <link href="image/favicon.ico" type="image/x-cion" rel="shortcut icon">
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+  <script type="text/javascript" src="js/home.js"></script>
+</head>
+<body>
+  <div id="header">
+    <div class="header_content">
+      <div class="header_nav">
+        <a href="#"> 
+          <img src="image/home_header_logo.png" alt="logo" />
+        </a>
+          <ul>
+            <li onmouseover="header_nav_hover(this)" onmouseout="header_nav_out(this)" class="header_current_page">
+            <a href="#" target="_self">首页</a></li>
+            <li onmouseover="header_nav_hover(this)" onmouseout="header_nav_out(this)"><a href="#" target="_self">微吧</a></li>
+            <li onmouseover="header_nav_hover(this)" onmouseout="header_nav_out(this)"><a href="#" target="_self">频道</a></li>
+            <li onmouseover="header_nav_hover(this)" onmouseout="header_nav_out(this)"><a href="#" target="_self">应用商店</a></li>
+            <li onmouseover="header_nav_hover(this)" onmouseout="header_nav_out(this)"><a href="#" target="_self">黑板报</a></li>
+            <li onmouseover="show_apps_list(this)" onmouseout="hide_apps_list(this)" id="apps"><a href="#" target="_self">应用</a>
+              <div class="header_apps_list" id="header_apps_list">
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                群组
+              </a>
+            </div>
+            <div class="app_link">
+              <a href="#">
+                <img src="image/app01.png" alt="app1"/>
+                更多应用
+              </a>
+            </div>
+          </div></li>
+          </ul>
+          
+      </div>
+      <div class="header_right">
+        <div class="header_search">
+          <form action="#" method="get">
+            <input class= "search_text" type="text" value="搜微博 / 昵称 / 标签" onfocus="this.value = ''" onblur="this.value = '搜微博 / 昵称 / 标签'"/>
+            <input class="search_button" type="image" src="image/home_header_search.png" alt="submit">
+          </form>
+        </div>
+        <ul>
+            <li onmouseover="header_nav_hover(this)" onmouseout="header_nav_out(this)"><a href="#" target="_self">刘朱石强</a></li>
+            <li onmouseover="show_message_list(this)" onmouseout="hide_message_list(this)" id="message"><a href="#" target="_self">消息</a><div class="header_message_list" id="header_message_list">
+            <div class="header_list_a_line">
+              <a href="#">
+              @提到我的
+              </a>
+            </div>
+            <div class="header_list_a_line">
+              <a href="#">
+              @提到我的
+              </a>
+            </div >
+            <div class="header_list_a_line">
+              <a href="#">
+              @提到我的
+              </a>
+            </div>
+            <div class="header_list_a_line">
+              <a href="#">
+              @提到我的
+              </a>
+            </div>
+            <div class="header_list_a_line">
+              <a href="#">
+              @提到我的
+              </a>
+            </div>
+            <div class="header_list_a_line">
+              <a href="#">
+              @提到我的
+              </a>
+            </div>
+
+          </div></li>
+            <li onmouseover="show_account_list(this)" onmouseout="hide_account_list(this)" id="account"><a href="#" target="_self">账号</a><div class="header_account_list" id="header_account_list">
+            <div>
+              <!--
+              未完, 应用列表需要动态添加
+            -->
+            </div></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="main_wrap">
+    <div class="main_left">
+      <div class="send_weibo_tips_top">
+      <div class="send_weibo_tips_top_left">
+        新注册的童鞋如果体验社区功能欢迎到任务中心去做任务哦~
+      </div>
+      <div class="send_weibo_tips_top_right">
+        可以输入<span class="send_weibo_tips_top_right_num">140</span>个字
+      </div>
+      </div>
+      <form method="get" action="#">
+      <textarea class="send_weibo_textarea"></textarea>
+      <div class="send_weibo_with_super_function">
+        <a class="super_function_type" href="#">
+          <img src="image/super_function_type_01.png"/>
+          表情
+        </a>
+        <a class="super_function_type" href="#">
+          <img src="image/super_function_type_01.png"/>
+          表情
+        </a>
+        <a class="super_function_type" href="#">
+          <img src="image/super_function_type_01.png"/>
+          表情
+        </a>
+        <a class="super_function_type" href="#">
+          <img src="image/super_function_type_01.png"/>
+          表情
+        </a>
+        <a class="super_function_type" href="#">
+          <img src="image/super_function_type_01.png"/>
+          表情
+        </a>
+        <a class="super_function_type" href="#">
+          <img src="image/super_function_type_01.png"/>
+          表情
+        </a>
+        <a class="super_function_type" href="#">
+          <img src="image/super_function_type_01.png"/>
+          表情
+        </a>
+        <input type="image" src="image/send_weibo_button.png"/>
+      </div>      
+      </form>
+      <div class="top_ad">
+        <a href="#"><img src="image/top_ad.png"/></a>
+      </div>
+      <div class="top_tab">
+        <div class="tab_item_active">
+          <a href="#">我关注的</a>
+        </div>
+        <div class="tab_item_not_active">
+          <a href="#">全站动态</a>
+        </div>
+        <div class="tab_item_not_active">
+          <a href="#">我关注的频道</a>
+        </div>
+      </div>
+      <div class="new_weibo">
+        <div class="new_weibo_user_name">
+          <a href="#"><img src="image/user_01.jpg">青春校园</a>
+        </div>
+        <div class="new_weibo_content">
+          还在开发。是否名称是4.x大家可以耐心等待~
+        </div>
+        <div class="weibo_retransmitted">
+          <img src="image/small_triangle.png"/>
+          <div class="weibo_retransmitted_user_name">
+            <a href="#">@雪龙</a>
+          </div>
+          <div class="weibo_retransmitted_content">
+            官方怎么了啊 求证实，还在开发？
+          </div>
+          <div class="weibo_info">
+            <div class="date_time">
+              <a href="#">03月20日 12:30&nbsp&nbsp</a>
+            </div>
+              <div class="from_address">
+                来自网站
+              </div>
+           
+            <div class="comment_and_retransmission">
+              <a href="#">原文转发（2）</a> | <a href="#">原文评论（3）</a>
+            </div>
+          </div>
+        </div>
+        <div class="weibo_info">
+            <div class="date_time">
+              <a href="#">03月20日 12:30&nbsp&nbsp</a>
+            </div>
+              <div class="from_address">
+                来自网站
+              </div>
+           
+            <div class="comment_and_retransmission">
+              <a href="#">赞（4）</a> | <a href="#">转发（1）</a> | <a href="#">收藏</a> | <a href="#">评论（1）</a>
+            </div>
+          </div>
+      </div>
+      <div class="new_weibo">
+        <div class="new_weibo_user_name">
+          <a href="#"><img src="image/user_01.jpg">青春校园</a>
+        </div>
+        <div class="new_weibo_content">
+          还在开发。是否名称是4.x大家可以耐心等待~
+        </div>
+        <div class="weibo_retransmitted">
+          <img src="image/small_triangle.png"/>
+          <div class="weibo_retransmitted_user_name">
+            <a href="#">@雪龙</a>
+          </div>
+          <div class="weibo_retransmitted_content">
+            官方怎么了啊 求证实，还在开发？
+          </div>
+          <div class="weibo_info">
+            <div class="date_time">
+              <a href="#">03月20日 12:30&nbsp&nbsp</a>
+            </div>
+              <div class="from_address">
+                来自网站
+              </div>
+           
+            <div class="comment_and_retransmission">
+              <a href="#">原文转发（2）</a> | <a href="#">原文评论（3）</a>
+            </div>
+          </div>
+        </div>
+        <div class="weibo_info">
+            <div class="date_time">
+              <a href="#">03月20日 12:30&nbsp&nbsp</a>
+            </div>
+              <div class="from_address">
+                来自网站
+              </div>
+           
+            <div class="comment_and_retransmission">
+              <a href="#">赞（4）</a> | <a href="#">转发（1）</a> | <a href="#">收藏</a> | <a href="#">评论（1）</a>
+            </div>
+          </div>
+      </div>
+      <div class="new_weibo">
+        <div class="new_weibo_user_name">
+          <a href="#"><img src="image/user_01.jpg">青春校园</a>
+        </div>
+        <div class="new_weibo_content">
+          还在开发。是否名称是4.x大家可以耐心等待~
+        </div>
+        <div class="weibo_retransmitted">
+          <img src="image/small_triangle.png"/>
+          <div class="weibo_retransmitted_user_name">
+            <a href="#">@雪龙</a>
+          </div>
+          <div class="weibo_retransmitted_content">
+            官方怎么了啊 求证实，还在开发？
+          </div>
+          <div class="weibo_info">
+            <div class="date_time">
+              <a href="#">03月20日 12:30&nbsp&nbsp</a>
+            </div>
+              <div class="from_address">
+                来自网站
+              </div>
+           
+            <div class="comment_and_retransmission">
+              <a href="#">原文转发（2）</a> | <a href="#">原文评论（3）</a>
+            </div>
+          </div>
+        </div>
+        <div class="weibo_info">
+            <div class="date_time">
+              <a href="#">03月20日 12:30&nbsp&nbsp</a>
+            </div>
+              <div class="from_address">
+                来自网站
+              </div>
+           
+            <div class="comment_and_retransmission">
+              <a href="#">赞（4）</a> | <a href="#">转发（1）</a> | <a href="#">收藏</a> | <a href="#">评论（1）</a>
+            </div>
+          </div>
+      </div>
+      <div class="new_weibo">
+        <div class="new_weibo_user_name">
+          <a href="#"><img src="image/user_01.jpg">青春校园</a>
+        </div>
+        <div class="new_weibo_content">
+          还在开发。是否名称是4.x大家可以耐心等待~
+        </div>
+        <div class="weibo_retransmitted">
+          <img src="image/small_triangle.png"/>
+          <div class="weibo_retransmitted_user_name">
+            <a href="#">@雪龙</a>
+          </div>
+          <div class="weibo_retransmitted_content">
+            官方怎么了啊 求证实，还在开发？
+          </div>
+          <div class="weibo_info">
+            <div class="date_time">
+              <a href="#">03月20日 12:30&nbsp&nbsp</a>
+            </div>
+              <div class="from_address">
+                来自网站
+              </div>
+           
+            <div class="comment_and_retransmission">
+              <a href="#">原文转发（2）</a> | <a href="#">原文评论（3）</a>
+            </div>
+          </div>
+        </div>
+        <div class="weibo_info">
+            <div class="date_time">
+              <a href="#">03月20日 12:30&nbsp&nbsp</a>
+            </div>
+              <div class="from_address">
+                来自网站
+              </div>
+           
+            <div class="comment_and_retransmission">
+              <a href="#">赞（4）</a> | <a href="#">转发（1）</a> | <a href="#">收藏</a> | <a href="#">评论（1）</a>
+            </div>
+          </div>
+      </div><div class="new_weibo">
+        <div class="new_weibo_user_name">
+          <a href="#"><img src="image/user_01.jpg">青春校园</a>
+        </div>
+        <div class="new_weibo_content">
+          还在开发。是否名称是4.x大家可以耐心等待~
+        </div>
+        <div class="weibo_retransmitted">
+          <img src="image/small_triangle.png"/>
+          <div class="weibo_retransmitted_user_name">
+            <a href="#">@雪龙</a>
+          </div>
+          <div class="weibo_retransmitted_content">
+            官方怎么了啊 求证实，还在开发？
+          </div>
+          <div class="weibo_info">
+            <div class="date_time">
+              <a href="#">03月20日 12:30&nbsp&nbsp</a>
+            </div>
+              <div class="from_address">
+                来自网站
+              </div>
+           
+            <div class="comment_and_retransmission">
+              <a href="#">原文转发（2）</a> | <a href="#">原文评论（3）</a>
+            </div>
+          </div>
+        </div>
+        <div class="weibo_info">
+            <div class="date_time">
+              <a href="#">03月20日 12:30&nbsp&nbsp</a>
+            </div>
+              <div class="from_address">
+                来自网站
+              </div>
+           
+            <div class="comment_and_retransmission">
+              <a href="#">赞（4）</a> | <a href="#">转发（1）</a> | <a href="#">收藏</a> | <a href="#">评论（1）</a>
+            </div>
+          </div>
+      </div><div class="new_weibo">
+        <div class="new_weibo_user_name">
+          <a href="#"><img src="image/user_01.jpg">青春校园</a>
+        </div>
+        <div class="new_weibo_content">
+          还在开发。是否名称是4.x大家可以耐心等待~
+        </div>
+        <div class="weibo_retransmitted">
+          <img src="image/small_triangle.png"/>
+          <div class="weibo_retransmitted_user_name">
+            <a href="#">@雪龙</a>
+          </div>
+          <div class="weibo_retransmitted_content">
+            官方怎么了啊 求证实，还在开发？
+          </div>
+          <div class="weibo_info">
+            <div class="date_time">
+              <a href="#">03月20日 12:30&nbsp&nbsp</a>
+            </div>
+              <div class="from_address">
+                来自网站
+              </div>
+           
+            <div class="comment_and_retransmission">
+              <a href="#">原文转发（2）</a> | <a href="#">原文评论（3）</a>
+            </div>
+          </div>
+        </div>
+        <div class="weibo_info">
+            <div class="date_time">
+              <a href="#">03月20日 12:30&nbsp&nbsp</a>
+            </div>
+              <div class="from_address">
+                来自网站
+              </div>
+           
+            <div class="comment_and_retransmission">
+              <a href="#">赞（4）</a> | <a href="#">转发（1）</a> | <a href="#">收藏</a> | <a href="#">评论（1）</a>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="main_right">
+
+    </div>
+  </div>
+</body>
+</html>
