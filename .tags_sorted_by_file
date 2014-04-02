@@ -19698,6 +19698,30 @@ generator	library\Zend\XmlRpc\Value\Scalar.php	/^        $generator = $this->get
 Zend_XmlRpc_Value_String	library\Zend\XmlRpc\Value\String.php	/^class Zend_XmlRpc_Value_String extends Zend_XmlRpc_Value_Scalar$/;"	c
 Zend_XmlRpc_Value_Struct	library\Zend\XmlRpc\Value\Struct.php	/^class Zend_XmlRpc_Value_Struct extends Zend_XmlRpc_Value_Collection$/;"	c
 generator	library\Zend\XmlRpc\Value\Struct.php	/^        $generator = $this->getGenerator();$/;"	v
+Element	public\css\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\2014-03-29_20.23.24.shujujiegou.cpp	/^typedef struct Element{	$/;"	s	file:
+Element	public\css\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\2014-03-29_20.23.24.shujujiegou.cpp	/^} Element, *Status;$/;"	t	typeref:struct:Element	file:
+M	public\css\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\2014-03-29_20.23.24.shujujiegou.cpp	1;"	d	file:
+N	public\css\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\2014-03-29_20.23.24.shujujiegou.cpp	2;"	d	file:
+Status	public\css\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\2014-03-29_20.23.24.shujujiegou.cpp	/^} Element, *Status;$/;"	t	typeref:struct:Element	file:
+letters	public\css\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\2014-03-29_20.23.24.shujujiegou.cpp	/^char letters[N];/;"	v
+next_element	public\css\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\2014-03-29_20.23.24.shujujiegou.cpp	/^	struct Element * next_element;$/;"	m	struct:Element	typeref:struct:Element::Element	file:
+num	public\css\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\2014-03-29_20.23.24.shujujiegou.cpp	/^	int num;$/;"	m	struct:Element	file:
+status	public\css\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\2014-03-29_20.23.24.shujujiegou.cpp	/^Status status[M];	\/\/状态$/;"	v
+transfer_table	public\css\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\2014-03-29_20.23.24.shujujiegou.cpp	/^Status transfer_table[M][N];	\/\/状态转移表$/;"	v
+M	public\css\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\2014-03-29_19.07.13.shujujiegou.cpp	1;"	d	file:
+N	public\css\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\2014-03-29_19.07.13.shujujiegou.cpp	2;"	d	file:
+letters	public\css\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\2014-03-29_19.07.13.shujujiegou.cpp	/^Char letters [N];	\/\/字母表$/;"	v
+status	public\css\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\2014-03-29_19.07.13.shujujiegou.cpp	/^Status status[M];	\/\/状态$/;"	v
+transfer_table	public\css\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\2014-03-29_19.07.13.shujujiegou.cpp	/^Status transfer_table[M][N];	\/\/状态转移表$/;"	v
+Element	public\css\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\2014-03-29_20.19.30.shujujiegou.cpp	/^typedef struct Element{	$/;"	s	file:
+Element	public\css\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\2014-03-29_20.19.30.shujujiegou.cpp	/^} Element, *Status;$/;"	t	typeref:struct:Element	file:
+M	public\css\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\2014-03-29_20.19.30.shujujiegou.cpp	1;"	d	file:
+N	public\css\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\2014-03-29_20.19.30.shujujiegou.cpp	2;"	d	file:
+Status	public\css\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\2014-03-29_20.19.30.shujujiegou.cpp	/^} Element, *Status;$/;"	t	typeref:struct:Element	file:
+next_element	public\css\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\2014-03-29_20.19.30.shujujiegou.cpp	/^	struct Element * next_element;$/;"	m	struct:Element	typeref:struct:Element::Element	file:
+num	public\css\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\2014-03-29_20.19.30.shujujiegou.cpp	/^	int num;$/;"	m	struct:Element	file:
+status	public\css\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\2014-03-29_20.19.30.shujujiegou.cpp	/^Status status[M];	\/\/状态$/;"	v
+transfer_table	public\css\%HOMEDRIVE%%HOMEPATH%\.sublime\history\C\Users\Administrator\Desktop\2014-03-29_20.19.30.shujujiegou.cpp	/^Status transfer_table[M][N];	\/\/状态转移表/;"	v
 application	public\index.php	/^$application = new Zend_Application($/;"	v
 change_child_status	public\js\home.js	/^function change_child_status(child){$/;"	f
 change_header_list	public\js\home.js	/^function change_header_list(self, child){$/;"	f
