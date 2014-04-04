@@ -1,0 +1,8 @@
+header.png	张玉林
+side_bar.png	张柏荣
+footer.png	杜军动
+main.png	刘朱石强
+说明：
+1.这是前台的分工。
+2.首页已经写好（by liuzhushiqiang），大家只要写这些部分的超链接点进去所加载的页面。
+3.其他页面和首页相同的部分可以不要写，只要写不同的部分。
