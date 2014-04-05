@@ -4,7 +4,8 @@ body{margin:0; padding:0; font-size:12px;
 
 /*重置浏览器默认样式*/
 h1, h2, h3, p, ul, li, dl, dt, dd, img, input, a{margin:0; 
-padding:0; list-style:none; text-decoration: none;}
+padding:0; list-style:none; text-decoration: none; 
+color: #000000;}
 
 /*
 header 部分开始
@@ -138,6 +139,7 @@ main 部分开始
 	margin-bottom: 10px;
 	padding-left: 20px;
 	padding-right: 20px;
+	float: left;
 }
 
 .send_weibo_tips_top_left{
@@ -316,4 +318,154 @@ main 部分开始
 
 .weibo_info a{
 	color: #99B2E5;
+}
+
+.main_right{
+	width: 230px;
+	height: auto;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	margin-left: 1px;
+	padding:20px 20px;
+	background: #FBFBFB;
+	float: right;
+}
+
+.main_right_profile{
+	width: 230px;
+	height: 100px;
+}
+
+.main_right_profile_image{
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+
+.main_right_profile_name{
+	width: 120px;
+	height: 30px;
+	margin-left: 10px;
+	font-weight: bold;
+	float: left;
+}
+
+.main_right_profile_name a{
+	color: #3366CC;
+}
+
+.main_right_profile_reputation{
+	width: 120px;
+	height: 20px;
+	margin-left: 10px;
+	color: #666666;
+	line-height: 30px;
+	float: left;
+}
+
+.main_right_link_info{
+	width: 230px;
+	height: 42px;
+	margin-top: 10px;
+}
+
+.main_right_link_info_item{
+	width: 56px;
+	height: 42px;
+	line-height: 21px;
+	border-right: 1px solid #CCCCCC;
+	text-align: center;
+	float: left;
+}
+
+.main_right_link_info_item_last{
+	border: none;
+}
+
+.main_right_intersting_people{
+	border-top: 2px solid #CCCCCC;
+	margin-top: 20px;
+	padding-top: 20px;
+}
+
+.main_right_title{
+	width: 230px;
+	height: 20px;
+}
+
+.main_right_title_left{
+	font-size: 14px;
+	font-weight: bold;
+	float: left;
+}
+
+.main_right_title_right{
+	float: right;
+}
+
+.main_right_title_right a{
+	color: #3366CC;
+}
+
+.main_right_intersting_people_item{
+	width: 230px;
+	height: 50px;
+	padding-top: 20px;
+	position: relative;
+}
+
+.main_right_intersting_people_profile_image{
+	width: 50px;
+	height: 47px;
+	margin-right: 10px;
+	float: left;
+}
+
+.main_right_intersting_people_profile_name{
+	width: 108px;
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+	float: left;
+}
+
+.main_right_intersting_people_profile_name a{
+	color: #3366CC;
+}
+
+.main_right_intersting_people_profile_intro{
+	width: 108px;
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+	float: left;
+}
+
+.main_right_intersting_people_follow_button{
+	width: 50px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border: 1px solid #CCCCCC;
+	margin-left: 10px;
+	position: absolute;
+	top: 30px;
+	right: 0px;
+	float: right;
+}
+
+.main_right_intersting_people_follow_button a{
+	color: #666666;
+}
+
+.main_right_intersting_topic{
+	border-top: 2px solid #CCCCCC;
+	margin-top: 20px;
+	padding-top: 20px;
+}
+
+.main_right_intersting_microblog{
+	border-top: 2px solid #CCCCCC;
+	margin-top: 20px;
+	padding-top: 20px;
 }
