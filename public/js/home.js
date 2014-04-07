@@ -1,3 +1,14 @@
+window.onload = function(){
+  // var obj = document.getElementById("main_left");
+  // var height = obj.offsetHeight;
+  // var main_right = obj.nextSibling.nextSibling;
+  // main_right.style.height = height;
+  //alert(height);
+  //alert(main_right.offsetHeight);
+}
+
+
+
 function header_nav_hover(obj){
   obj.style.background = "#414448";
 }
@@ -9,18 +20,16 @@ function header_nav_out(obj){
 }
 
 function show_apps_list(obj){
-  var apps = document.getElementById("apps");
-  apps.style.background = "#ffffff";
-  apps.firstChild.style.color = "#000000";
-  var list = document.getElementById("header_apps_list");
+  obj.style.background = "#ffffff";
+  obj.firstChild.style.color = "#000000";
+  var list = obj.childNodes[2];
   list.style.display = "block";
 }
 
 function hide_apps_list(obj){
-  var apps = document.getElementById("apps");
-  apps.style.background = "#4A5055";
-  apps.firstChild.style.color = "#ffffff"; 
-  var list = document.getElementById("header_apps_list");
+  obj.style.background = "#4A5055";
+  obj.firstChild.style.color = "#ffffff"; 
+  var list = obj.childNodes[2];
   list.style.display = "none";
 }
 

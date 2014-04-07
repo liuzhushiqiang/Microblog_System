@@ -127,19 +127,21 @@ main 部分开始
  */
 .main_wrap{
 	width: 960px;
-	margin:0 auto;
-	background: orange;
+	margin:20px auto;
+	position: relative;
+	background: #F8F8F8;
+	border: 1px solid #E0E0E0;
+	z-index: -1;
 }
 
 .main_left{
 	width: 649px;
-	height: 2400px; /*这个样式只为测试用*/
 	background: #ffffff;
-	margin-top: 20px;
-	margin-bottom: 10px;
 	padding-left: 20px;
 	padding-right: 20px;
-	float: left;
+	display: inline-block;
+	border-right: 1px solid #E1E1E1;
+	/*float: left;*/
 }
 
 .send_weibo_tips_top_left{
@@ -322,13 +324,14 @@ main 部分开始
 
 .main_right{
 	width: 230px;
-	height: auto;
-	margin-top: 20px;
-	margin-bottom: 10px;
 	margin-left: 1px;
 	padding:20px 20px;
-	background: #FBFBFB;
-	float: right;
+	background: #F8F8F8;
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	/*float: right;*/
 }
 
 .main_right_profile{
@@ -464,8 +467,22 @@ main 部分开始
 	padding-top: 20px;
 }
 
-.main_right_intersting_microblog{
-	border-top: 2px solid #CCCCCC;
-	margin-top: 20px;
-	padding-top: 20px;
+.intersting_topic_item{
+	width: 230px;
+	height: 30px;
+}
+
+.intersting_topic_item_left a{
+	width: 180px;
+	height: 30px;
+	line-height: 30px;
+	color: #3366CC;
+	overflow: hidden;
+	float: left;
+}
+
+.intersting_topic_item_right{
+	line-height: 30px;
+	color: #666666;
+	float: right;
 }
