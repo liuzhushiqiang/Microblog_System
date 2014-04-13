@@ -1,6 +1,6 @@
 /*全局控制*/
 body{margin:0; padding:0; font-size:12px;  
-	font-family:"宋体", "微软雅黑"; background: #ECECEC;}
+	font-family:"Arial","宋体"; background: #ECECEC;}
 
 /*重置浏览器默认样式*/
 h1, h2, h3, p, ul, li, dl, dt, dd, img, input, a{margin:0; 
@@ -122,7 +122,8 @@ main 部分开始
  */
 .main_wrap{
 	width: 960px;
-	margin:20px auto;
+	margin:0 auto;
+	margin-top: 20px;
 	position: relative;
 	background: #F8F8F8;
 	border: 1px solid #E0E0E0;
@@ -202,7 +203,7 @@ main 部分开始
 	height: 34px;
 	border-bottom: 1px solid #CCCCCC;
 	border-color: #CCCCCC;
-	margin-top: 10px;
+	margin-top: 30px;
 	margin-bottom: 10px;
 }
 
@@ -478,5 +479,52 @@ main 部分开始
 .intersting_topic_item_right{
 	height: 20px;
 	color: #666666;
+	float: right;
+}
+
+#footer{
+	width: 960px;
+	margin: 0 auto;
+	background: #F8F8F8;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.footer_item{
+	width: 240px;
+	padding-top: 20px;
+	float: left;
+}
+
+.footer_item_topic{
+	width: 240px;
+	height: 25px;
+	line-height: 25px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.footer_item_link_item{
+	width: 240px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+}
+
+.copy_right_info{
+	width: 920px;
+	height: 30px;
+	line-height: 30px;
+	padding: 10px 20px;
+	color: #999999;
+	overflow: hidden;
+}
+
+.copy_right_info_left{
+	float: left;
+}
+
+.copy_right_info_right{
 	float: right;
 }
