@@ -1,0 +1,20 @@
+article.fn-left{
+	width: 70%;
+	min-height: 300px;
+}
+article.fn-left li{
+	list-style: none;
+}
+#stream{
+	margin-top: 0;
+}
+#streamUl{
+	margin-left: 0;
+}
+.ucavatar img{
+	width: 160px;height: 160px;
+	border: 1px solid #ccc;
+	border-radius: 100px;
+	padding: 1px;
+	box-shadow: 0 0px 10px rgba(0,0,0,0.2);
+}

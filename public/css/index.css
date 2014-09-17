@@ -83,6 +83,7 @@ header 部分开始
 	 top: 40px;
 	 left: -50px;
 	 padding: 20px 20px;
+	 border:2px solid gray;
 	 z-index: 100;
 }
 
@@ -92,6 +93,7 @@ header 部分开始
 	position: absolute;
 	top:40px;
 	right:0px;
+	border:2px solid gray;
 	z-index: 100;
 }
 
@@ -142,7 +144,7 @@ main 部分开始
 .send_weibo_tips_top_left{
 	font-size: 14px;
 	color:  #666666;
-	font-family: 微软雅黑;
+	font-family: "微软雅黑";
 	float: left;
 	font-weight: bold;
 }
@@ -251,6 +253,8 @@ main 部分开始
 }
 
 .new_weibo_user_name img{
+	width:50px;
+	height:47px;
 	position: absolute;
 	left: -60px;
 }
@@ -305,6 +309,7 @@ main 部分开始
 
 .from_address{
 	color: #999999;
+	margin-left:20px;
 	float: left;
 }
 
@@ -527,4 +532,21 @@ main 部分开始
 
 .copy_right_info_right{
 	float: right;
+}
+
+.loading {
+	background:#c1c39a;
+	color:#303030;
+	font-size:20px;
+	padding:5px 10px;
+	text-align:center;
+	width:450px;
+	margin:0px auto;
+	display:none;
+	border-radius: 5px;
+}
+
+.main_right_intersting_people_profile_image img{
+	width:50px;
+	height:40px;
 }

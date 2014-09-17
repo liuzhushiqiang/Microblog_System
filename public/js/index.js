@@ -5,6 +5,7 @@ window.onload = function(){
   // main_right.style.height = height;
   //alert(height);
   //alert(main_right.offsetHeight);
+	
 }
 
 

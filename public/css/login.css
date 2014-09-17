@@ -1,0 +1,97 @@
+#login-form{
+	margin: 0 auto;
+	margin-top: 400px;
+	width:650px;height:300px;
+	background: none;
+	position: relative;
+}
+#reg-form{
+	width: 540px;
+	margin: 40px auto;
+}
+html{
+	/*background:url(../image/login.jpg) no-repeat fixed center;*/
+}
+#login-form legend,#reg-form legend{
+	margin-left: 30px;
+	font-size: 24px;
+	/*-webkit-transform: rotate(-30deg);
+	position: relative;left: -40px;top:20px;*/
+}
+#username,#password,#repass,#email{
+	margin-left: 40px;
+	margin-top:20px;
+	height: 30px;
+	width:300px;
+	border:none;outline: none;border-radius: 3px;
+	font-size: 16px;
+	padding: 5px 10px;
+}
+#register,#regLogin{
+	margin-left: 40px;margin-top: 40px;
+	float: left;
+	font-size:16px;
+	color:#999;text-shadow:0 1px 1px rgba(0,0,0,0.5);
+}
+#regLogin{
+	color:#333;
+	font-weight: bold;
+}
+#login,#regBtn{
+	margin-top:10px;margin-left: 45px;
+	height: 50px;
+	width:200px;
+	background: #63c6ae;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+	font-size: 16px;font-weight: bold;
+	box-shadow: inset 0 2px rgba(255,255,255,0.2),0 4px 10px rgba(0,0,0,0.2);
+	letter-spacing: 0.4em;
+}
+#login:hover,#regBtn:hover{
+	background: #5cc5ba;
+}
+#msg{
+	height: 25px;
+	color:red;
+	position: absolute;
+	margin-left: 30px;
+}
+#background{
+	top: 0;
+	position: absolute;
+	width: 100%;
+	opacity: 1;
+	z-index: -1;
+}
+html{
+	overflow: hidden;
+}
+#main input{
+	margin: 0;
+}
+#register{
+	position: absolute;
+	right: 20px;
+	margin: 0;
+}
+#login{
+	margin: 0;
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
+	position: absolute;
+	top: -20px;
+	left: 283px;
+}
+#main #password{
+	margin-left: 30px;
+	width: 270px;
+}
+#main #email{
+	width: 270px;
+	margin-left: 30px;
+}

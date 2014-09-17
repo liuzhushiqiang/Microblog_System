@@ -1,0 +1,35 @@
+.btns{
+	height: 30px;
+	margin-left: 10px;
+}
+#stream ul li .btns li{
+	float:left;
+	width: 50px;
+	border: none;
+	text-align: center;
+	
+}
+#stream ul li .btns li a{
+	color: #999;
+}
+#stream ul li .btns li a:hover{
+	color: #333;
+}
+.commit-form{
+	clear: both;
+	margin: 10px 0;
+}
+#streamUl .commitList{
+	border: none;
+}
+.edit textarea{
+	width: 90%;
+	padding:3px 5px;
+	resize:none;
+}
+.edit input{
+	display: block;
+}
+.retweet{
+	display: none;
+}
