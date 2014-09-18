@@ -1,4 +1,4 @@
 Microblog_System
 ================
 
-A microblog system based on ThinkSNS
+A microblog system based on ThinkSNS~
