@@ -9,27 +9,11 @@ class IndexController extends BaseController{
 
     public function indexAction()
     {
-        //������һЩ���⣬����ٽ����
-        //1.����֣�render����home������������action��homeAction����css��JS������������,
-        //�ѵ�һ��Ҫ��·����baseURL������
-        //2.����apache��������������ˣ�ֻ����һ�������������ӳ���е���ң�����о�һ��Apache��
-        //zend framework��Դ���ԭ��
-        //3.PHP��html�ı��������Ǹ��ӣ�Ҫ���н����
-        //4.��ҳͼƬ���ŵ�js����ת��ͼ��û����
-    	//file_put_contents(APPLICATION_PATH."/logfile.txt", "OK?", FILE_APPEND);
-    	//file_put_contents(APPLICATION_PATH."/logfile.txt", "OK?", FILE_APPEND);
-    	
-    	$mb_post = new Mb_Post();
-    	 
-    	$this->view->res = $mb_post->get_weibo(0);
-    	$this->view->friends = $mb_post->get_friends(0);
-        
-        $this->render('index');
-    }
-    
-    public function loginAction()
-    {
-    	$this->render('login');
+    	if (isset($_Session['user_id'])) {
+            $this->render("index");
+        } else {
+            $this->_forward("login", "login");
+        }
     }
     
     public function autorefreshAction(){
