@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>thinksns</title> <link href="image/favicon.ico"
+<title>thinksns</title> <link href="<?php echo $this->baseUrl;?>/image/favicon.ico"
 	type="image/x-icon" rel="shortcut icon">
 <link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl;?>/css/index.css">
 <link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl;?>/css/artZoom.css">
@@ -10,22 +10,22 @@
 <link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl;?>/css/send_message.css">
 
 
-<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script> 
+<script type="text/javascript" src="<?php echo $this->baseUrl;?>/js/jquery-1.3.2.min.js"></script> 
 
-<script type="text/javascript" src="js/auto_refresh.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl;?>/js/auto_refresh.js"></script>
 
-<script type="text/javascript" src="js/index.js"></script>
-
-
-
-<script type="text/javascript" src="js/send_message.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl;?>/js/index.js"></script>
 
 
-<script type="text/javascript" src="js/artZoom.js"></script>
+
+<script type="text/javascript" src="<?php echo $this->baseUrl;?>/js/send_message.js"></script>
+
+
+<script type="text/javascript" src="<?php echo $this->baseUrl;?>/js/artZoom.js"></script>
 
 <script type="text/javascript">jQuery('a.artZoom').artZoom();</script>
 
-<script type="text/javascript" src="js/scrollpagination.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl;?>/js/scrollpagination.js"></script>
 <script type="text/javascript">
 $(function(){
 	$('#content').scrollPagination({
@@ -68,7 +68,7 @@ $(document).ready(function(){
 	  $("#send_weibo_button").click(function(){
 		  $.get("/index/index", function(){
 		  var d = new Date();
-		  var temp='<div class="new_weibo"><div class="new_weibo_user_name"><a href="#"><img src="image/shiqiang.jpg">shiqiang</a>'
+		  var temp='<div class="new_weibo"><div class="new_weibo_user_name"><a href="#"><img src="<?php echo $this->baseUrl;?>/image/shiqiang.jpg">shiqiang</a>'
 			+ '</div>'
 			+ '<div class="new_weibo_content"> ' + $("#send_weibo_textarea").val() + ' </div>'
 			+ '<div class="weibo_info">'
@@ -103,7 +103,7 @@ $(document).ready(function(){
 <div id="header">
 <div class="header_content">
 <div class="header_nav">
-<a href="#"> <img src="image/home_header_logo.png" alt="logo" />
+<a href="#"> <img src="<?php echo $this->baseUrl;?>/image/home_header_logo.png" alt="logo" />
 </a>
 <ul>
 <li onmouseover="header_nav_hover(this)"
@@ -113,11 +113,11 @@ $(document).ready(function(){
 	id="apps"><a href="#" target="_self">热门</a> <div
 	class="header_apps_list" id="header_apps_list">
 <div class="app_link">
-<a href="#"> <img src="image/app01.png" alt="app1" /> 群组
+<a href="#"> <img src="<?php echo $this->baseUrl;?>/image/app01.png" alt="app1" /> 群组
 </a>
 </div>
 <div class="app_link">
-<a href="#"> <img src="image/app01.png" alt="app1" /> 更多应用
+<a href="#"> <img src="<?php echo $this->baseUrl;?>/image/app01.png" alt="app1" /> 更多应用
 </a>
 </div>
 </div></li>
@@ -125,11 +125,11 @@ $(document).ready(function(){
 	id="apps"><a href="#" target="_self">应用</a> <div
 	class="header_apps_list" id="header_apps_list">
 <div class="app_link">
-<a href="#"> <img src="image/app01.png" alt="app1" /> 群组
+<a href="#"> <img src="<?php echo $this->baseUrl;?>/image/app01.png" alt="app1" /> 群组
 </a>
 </div>
 <div class="app_link">
-<a href="#"> <img src="image/app01.png" alt="app1" /> 更多应用
+<a href="#"> <img src="<?php echo $this->baseUrl;?>/image/app01.png" alt="app1" /> 更多应用
 </a>
 </div>
 </div></li>
@@ -137,11 +137,11 @@ $(document).ready(function(){
 	id="apps"><a href="#" target="_self">游戏</a> <div
 	class="header_apps_list" id="header_apps_list">
 <div class="app_link">
-<a href="#"> <img src="image/app01.png" alt="app1" /> 群组
+<a href="#"> <img src="<?php echo $this->baseUrl;?>/image/app01.png" alt="app1" /> 群组
 </a>
 </div>
 <div class="app_link">
-<a href="#"> <img src="image/app01.png" alt="app1" /> 更多应用
+<a href="#"> <img src="<?php echo $this->baseUrl;?>/image/app01.png" alt="app1" /> 更多应用
 </a>
 </div>
 </div></li>
@@ -152,13 +152,13 @@ $(document).ready(function(){
 <div class="header_search">
 <input class="search_text" type="text" value="搜微博 / 昵称 / 标签"
 	onfocus="this.value = ''" onblur="this.value = '搜微博 / 昵称 / 标签'" /> <a href="/index/sousuo?key_word=sunny" target="_blank"><input
-	class="search_button" type="image" src="image/home_header_search.png"
+	class="search_button" type="image" src="<?php echo $this->baseUrl;?>/image/home_header_search.png"
 	alt="submit"></a>
 
 </div>
 <ul>
 <li onmouseover="header_nav_hover(this)"
-	onmouseout="header_nav_out(this)"><a href="#" target="_self"><?php echo $_GET['nickname']?></a></li>
+	onmouseout="header_nav_out(this)"><a href="#" target="_self"><?php echo $_SESSION['nick_name']?></a></li>
 <li onmouseover="show_message_list(this)"
 	onmouseout="hide_message_list(this)" id="message"><a href="#"
 	target="_self">消息</a>
@@ -168,8 +168,18 @@ $(document).ready(function(){
 </div>
 
 </div></li>
-<li onmouseover="header_nav_hover(this)"
-	onmouseout="header_nav_out(this)"><a href="#" target="_self">设置</a></li>
+<li onmouseover="show_account_list(this)"
+	onmouseout="hide_account_list(this)" id="account"><a href="#"
+	target="_self">账号</a>
+<div class="header_account_list" id="header_account_list">
+<div class="header_list_a_line">
+<a href="#">设置</a>
+</div>
+<div class="header_list_a_line">
+<a href="<?php echo $this->baseURl;?>/login/logout">退出</a>
+</div>
+
+</div></li>
 </ul>
 </div>
 </div>
@@ -185,8 +195,8 @@ $(document).ready(function(){
 <textarea class="send_weibo_textarea" id="send_weibo_textarea"></textarea>
 <div class="send_weibo_with_super_function">
 <a class="super_function_type" href="#"> <img
-	src="image/super_function_type_01.png" /> 图片
-</a><input type="image" src="image/send_weibo_button.png" id="send_weibo_button" />
+	src="<?php echo $this->baseUrl;?>/image/super_function_type_01.png" /> 图片
+</a><input type="image" src="<?php echo $this->baseUrl;?>/image/send_weibo_button.png" id="send_weibo_button" />
 </div>
 <div class="top_tab">
 <div class="tab_item_active">
@@ -206,14 +216,14 @@ if(count($this->res) > 0){
 ?>
 <div class="new_weibo">
 <div class="new_weibo_user_name">
-<a href="#"><img src="image/<?php echo $this->res[$i]['profile']?>"><?php echo $this->res[$i]['nickname']?></a>
+<a href="#"><img src="<?php echo $this->baseUrl;?>/image/<?php echo $this->res[$i]['profile']?>"><?php echo $this->res[$i]['nickname']?></a>
 </div>
 <div class="new_weibo_content"> <?php echo $this->res[$i]['content']?> </div>
 <?php 
 if($this->res[$i]['image_url'] != Null){
 ?>
 <div class="new_weibo_picture">
-<A class="miniImg artZoom" href="image/<?php echo $this->res[$i]['image_url']?>" rel=image/a01.jpg><IMG class="small" src="image/<?php echo $this->res[$i]['image_url']?>"></A>
+<A class="miniImg artZoom" href="<?php echo $this->baseUrl;?>/image/<?php echo $this->res[$i]['image_url']?>" rel=<?php echo $this->baseUrl;?>/image/a01.jpg><IMG class="small" src="<?php echo $this->baseUrl;?>/image/<?php echo $this->res[$i]['image_url']?>"></A>
 </div>
 <?php 
 }
@@ -241,7 +251,7 @@ if($this->res[$i]['image_url'] != Null){
 <h2>发表评论</h2>
 <div>
 <input id="userName" class="f-text" value="shiqiang" type="hidden"/>
-<p id="face"><img src="/image/shiqiang_pinglun.png" class="current" /></p>
+<p id="face"><img src="<?php echo $this->baseUrl;?>/image/shiqiang_pinglun.png" class="current" /></p>
 </div>
 <div><input id="conBox" class="f-text"></div>
 <div class="tr">
@@ -278,7 +288,7 @@ if($this->res[$i]['image_url'] != Null){
 <div class="main_right" id="main_right">
 <div class="main_right_profile">
 <div class="main_right_profile_image">
-<a href="#"> <img src="image/main_right_profile_image.png" />
+<a href="#"> <img src="<?php echo $this->baseUrl;?>/image/main_right_profile_image.png" />
 </a>
 </div>
 <div class="main_right_profile_name">
@@ -315,7 +325,7 @@ for($a = 0; $a < count($this->friends); $a++){
 <div class="main_right_intersting_people_item">
 <div class="main_right_intersting_people_profile_image">
 <a href="#"> <img
-	src="image/<?php echo $this->friends[$a]['profile']?>"></a>
+	src="<?php echo $this->baseUrl;?>/image/<?php echo $this->friends[$a]['profile']?>"></a>
 </div>
 <div class="main_right_intersting_people_profile_name">
 <a href=""><?php echo $this->friends[$a]['nickname']?></a>

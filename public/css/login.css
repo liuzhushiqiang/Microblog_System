@@ -1,8 +1,93 @@
 /*全局控制*/
-body{margin:0; padding:0; font-size:12px;  
-	font-family:"Arial","宋体"; background: url("/image/login_background.jpg");}
+body{margin:0; padding:0; font-size:14px;  
+	font-family:"Arial","宋体"; background: url("/image/login/login_background.jpg");}
 
 /*重置浏览器默认样式*/
 h1, h2, h3, p, ul, li, dl, dt, dd, img, input, a{margin:0; 
 padding:0; list-style:none; text-decoration: none; 
 color: #000000;}
+
+#top_content_wrap{
+	width: 720px;
+	margin:0px auto;
+}
+
+#login_logo_1{
+	width: 720px;
+	font-size: 36px;
+	color: #ffffff;
+	margin-top:100px;
+}
+
+#login_logo_2{
+	width: 720px;
+	font-size: 48px;
+	color: #ffffff;
+	margin-top:50px;
+}
+
+#login_basic_form{
+	width: 720px;
+	height: 45px;
+	margin-top: 60px;
+}
+
+#user_name_input{
+	width: 250px;
+	height: 45px;
+	border: 10px solid #000000;
+	float: left;
+	font-weight: bold;
+}
+
+#user_password_input{
+	width: 250px;
+	height: 45px;
+	border: 10px solid #000000;
+	margin-left: 4px;
+	margin-right: 4px;
+	float: left;
+	font-weight: bold;
+}
+
+#login_addition_option{
+	width: 650;
+	height: 15px;
+	margin-top: 10px;
+}
+
+#keep_login_and_login_info{
+	width: 300px;
+	height: 15px;
+	float: left;
+}
+
+#forget_password_and_sign_up{
+	width: 300px;
+	height: 15px;
+	float: right;
+}
+
+#keep_login{
+	width: 600px;
+	height: 15px;
+	margin-top: 10px;
+}
+
+#keep_login_checkbox{
+	margin-right:2px;
+}
+
+#login_info{
+	margin-left: 40px;
+	color: red;
+}
+
+#forget_password{
+	color: blue;
+}
+
+#sign_up{
+	margin-left: 40px;
+	color: blue;
+}
