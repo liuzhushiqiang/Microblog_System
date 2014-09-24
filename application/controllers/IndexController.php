@@ -5,11 +5,13 @@ require_once APPLICATION_PATH.'/models/Mb_Comment.php';
 
 require_once 'BaseController.php';
 
+session_start();
+
+
 class IndexController extends BaseController{
 
     public function indexAction()
     {
-    	session_start();
         if (isset($_SESSION['user_id'])) {
             $mb_post = new Mb_Post();
         
@@ -17,7 +19,17 @@ class IndexController extends BaseController{
         
             $this->render("index");
         } else {
-            $this->render("login");
+            file_put_contents("debug.txt", "debug index index \r\n", FILE_APPEND);
+
+            if (isset($_COOKIE['user_email']) && isset($_COOKIE['user_password'])) {
+                            file_put_contents("debug.txt", "debug index index \r\n", FILE_APPEND);
+
+                $_REQUEST[email] = $_COOKIE['user_email'];
+                $_REQUEST[password] = base64_decode($_COOKIE['user_password']); 
+                $this->_forward("login", "login");
+            } else {
+                $this->render("login");
+            }
         }
     }
 
