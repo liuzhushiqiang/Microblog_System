@@ -2,6 +2,7 @@
 
 require_once APPLICATION_PATH.'/models/Mb_Post.php';
 require_once APPLICATION_PATH.'/models/Mb_Comment.php';
+require_once APPLICATION_PATH.'/util/PageClass.php';
 
 require_once 'BaseController.php';
 
@@ -13,9 +14,21 @@ class IndexController extends BaseController{
     public function indexAction()
     {
         if (isset($_SESSION['user_id'])) {
+            /**
+             * 分页显示
+             */
             $mb_post = new Mb_Post();
-        
-            $this->view->res = $mb_post->get_weibo(0);
+            $rowsPerPage = 5;    //perPage recordes  
+            $curPage = 1;
+            if($this->_request->getParam('page')) {
+               $curPage = $this->_request->getParam('page');
+            }
+            //search data and display
+            $this->view->res = $mb_post->get_weibo(true, $rowsPerPage, 
+                ($curPage-1)*$rowsPerPage);
+            $rows = count($mb_post->get_weibo(false));
+            $Pager = new PageClass($rows,$rowsPerPage); 
+            $this->view->pagebar = $Pager->getNavigation();  
         
             $this->render("index");
         } else {

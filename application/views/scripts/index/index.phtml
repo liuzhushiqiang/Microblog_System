@@ -281,8 +281,11 @@ if($this->res[$i]['image_url'] != Null){
 }
 ?>
 </div>
-<div class="loading" id="loading">Wait a moment... it's loading!</div>
-<div class="loading" id="nomoreresults">Sorry, no more results for your pagination demo.</div>
+<div class="page">
+    <?php echo $this->pagebar; ?>
+</div>
+<!--<div class="loading" id="loading">Wait a moment... it's loading!</div>
+<div class="loading" id="nomoreresults">Sorry, no more results for your pagination demo.</div> -->
 </div>
 
 <div class="main_right" id="main_right">

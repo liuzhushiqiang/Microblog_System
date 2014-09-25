@@ -3,14 +3,23 @@
 class Mb_Post extends Zend_Db_Table{
 	protected $_name = 'mb_post';
 	
-	function get_weibo($start_index){
-		
-		$sql = "select DISTINCT new_user.id, new_user.nickname,  
+	function get_weibo($flag, $page_size, $start_index){
+		$sql = null;
+		if ($flag) {
+			$sql = "select DISTINCT new_user.id, new_user.nickname,  
 				new_user.profile, mb_post.content, mb_post.create_time,  
 				mb_post.image_url from (select DISTINCT mb_user.id, mb_user.nickname,  
-				mb_user.profile from mb_user, mb_user_relation where mb_user.id = 1000 or (mb_user_relation.uid = 1000 and mb_user_relation.fid = mb_user.id)) new_user, 
+				mb_user.profile from mb_user, mb_user_relation where mb_user.id = ".$_SESSION['user_id']." or (mb_user_relation.uid = ".$_SESSION['user_id']." and mb_user_relation.fid = mb_user.id)) new_user, 
 				mb_post where new_user.id = mb_post.uid order by mb_post.create_time desc 
-				limit 0, 10;";
+				limit ".$start_index.", ".$page_size.";";
+		} else {
+			$sql = "select DISTINCT new_user.id, new_user.nickname,  
+				new_user.profile, mb_post.content, mb_post.create_time,  
+				mb_post.image_url from (select DISTINCT mb_user.id, mb_user.nickname,  
+				mb_user.profile from mb_user, mb_user_relation where mb_user.id = ".$_SESSION['user_id']." or (mb_user_relation.uid = ".$_SESSION['user_id']." and mb_user_relation.fid = mb_user.id)) new_user, 
+				mb_post where new_user.id = mb_post.uid order by mb_post.create_time desc";
+		}
+		
 		$db = $this->getAdapter ();
 // 		file_put_contents(APPLICATION_PATH."/logfile.txt", "OK?", FILE_APPEND);
 		
