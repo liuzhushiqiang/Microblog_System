@@ -19,10 +19,10 @@ class IndexController extends BaseController{
         
             $this->render("index");
         } else {
-            file_put_contents("debug.txt", "debug index index \r\n", FILE_APPEND);
+            //file_put_contents("debug.txt", "debug index index \r\n", FILE_APPEND);
 
             if (isset($_COOKIE['user_email']) && isset($_COOKIE['user_password'])) {
-                            file_put_contents("debug.txt", "debug index index \r\n", FILE_APPEND);
+                //file_put_contents("debug.txt", "debug index index \r\n", FILE_APPEND);
 
                 $_REQUEST[email] = $_COOKIE['user_email'];
                 $_REQUEST[password] = base64_decode($_COOKIE['user_password']); 
@@ -31,6 +31,10 @@ class IndexController extends BaseController{
                 $this->render("login");
             }
         }
+    }
+
+    public function forgetpasswordAction() {
+        $this->render("forgetpassword");
     }
 
     public function autorefreshAction(){

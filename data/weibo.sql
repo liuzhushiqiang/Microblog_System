@@ -12,7 +12,7 @@ create table if not exists mb_user(
 	profile varchar(50) not NULL,
   address varchar(50) not null,
 	create_date timestamp not null DEFAULT current_timestamp()
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1010;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1011;
 
 INSERT INTO `mb_user` (`id`, `nickname`, `pw`, `email`, profile, address, `create_date`) VALUES
 (1000, 'shiqiang', md5('shiqiang'), 'shiqiang@shiqiang.com', 'shiqiang.jpg', '福建-厦门-集美', now()),
@@ -24,7 +24,8 @@ INSERT INTO `mb_user` (`id`, `nickname`, `pw`, `email`, profile, address, `creat
 (1006, 'geek3', md5('geek3'), 'geek3@geek3.com', 'geek3.jpg', '福建-泉州-石狮', now()),
 (1007, 'geek4', md5('geek4'), 'geek4@geek4.com', 'geek4.jpg', '福建-泉州-石狮', now()),
 (1008, 'geek5', md5('geek5'), 'geek5@geek5.com', 'geek5.jpg', '福建-泉州-石狮', now()),
-(1009, 'geek6', md5('geek6'), 'geek6@geek6.com', 'geek6.jpg', '福建-泉州-石狮', now())
+(1009, 'geek6', md5('geek6'), 'geek6@geek6.com', 'geek6.jpg', '福建-泉州-石狮', now()),
+(1010, '2514881230', md5('2514881230'), '2514881230@qq.com', '2514881230.jpg', '福建-厦门-集美', now())
 ;
 
 CREATE TABLE IF NOT EXISTS `mb_post` (
