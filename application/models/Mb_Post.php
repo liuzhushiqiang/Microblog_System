@@ -46,29 +46,64 @@ class Mb_Post extends Zend_Db_Table{
 		}
 	}
 	
-	function jiaguanzhu($start_index){
+	function jiaguanzhu(){
 	
-		$sql = "insert into mb_user_relation(uid, fid) values(1000, 1003);";
+		$sql = "insert into mb_user_relation(uid, fid) values(1000, 1004);";
 		$db = $this->getAdapter ();
 		// 		file_put_contents(APPLICATION_PATH."/logfile.txt", "OK?", FILE_APPEND);
 	
 		$db->query ( $sql );
 		}
 		
-		function sousuo($key_word){
+	function sousuo($key_word){
+	
+		$sql = "select mb_user.nickname, mb_user.profile, mb_post.content, mb_post.create_time, mb_post.image_url from mb_user, mb_post where content like '%".$key_word."%' and mb_user.id = ".$_SESSION['user_id']."   
+		limit 0, 3;";
+		$db = $this->getAdapter ();
+		// 		file_put_contents(APPLICATION_PATH."/logfile.txt", "OK?", FILE_APPEND);
+	
+		$res = $db->query ( $sql )->fetchAll ();
+		if(count($res) > 0){
+		return $res;
+		}else{
+		return $res = NULL;
+		}
+	}
+
+	function insert_post($weibo_text, $weibo_image,
+	 $retransmitted_id) {
+		$sql = 
+		"insert into mb_post(uid, content, "
+			."image_url, retransmitted_id) "
+			."values(".$_SESSION[user_id].", '"
+			.$weibo_text."', '".$weibo_image."', "
+			.retransmitted_id.");";
+		$db = $this->getAdapter ();
+		// 		file_put_contents(APPLICATION_PATH."/logfile.txt", "OK?", FILE_APPEND);
+	
+		return $db->query ( $sql );
+	}
+
+	function getmyweibo() {
+		$sql = null;
+		$sql = "select DISTINCT mb_user.id, nickname,  
+				profile, content, mb_post.create_time,  
+				mb_post.image_url from mb_user, mb_post
+				 where mb_user.id = ".$_SESSION['user_id']." 
+				 and mb_user.id = mb_post.uid 
+				 order by mb_post.create_time desc 
+				limit 0, 5;";
 		
-			$sql = "select mb_user.nickname, mb_user.profile, mb_post.content, mb_post.create_time, mb_post.image_url from mb_user, mb_post where content like '%".$key_word."%' and mb_user.id = 1000  
-			limit 0, 3;";
-			$db = $this->getAdapter ();
-			// 		file_put_contents(APPLICATION_PATH."/logfile.txt", "OK?", FILE_APPEND);
+		$db = $this->getAdapter ();
+// 		file_put_contents(APPLICATION_PATH."/logfile.txt", "OK?", FILE_APPEND);
 		
-			$res = $db->query ( $sql )->fetchAll ();
-			if(count($res) > 0){
+		$res = $db->query ( $sql )->fetchAll ();
+		if(count($res) > 0){				
 			return $res;
-			}else{
+		}else{
 			return $res = NULL;
-			}
-			}
+		}
+	}
 }
 
 ?>

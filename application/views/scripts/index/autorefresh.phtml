@@ -4,14 +4,14 @@ if(count($this->res) > 0){
 ?>
 <div class="new_weibo">
 <div class="new_weibo_user_name">
-<a href="#"><img src="image/<?php echo $this->res[$i]['profile']?>"><?php echo $this->res[$i]['nickname']?></a>
+<a href="#"><img src="<?php echo $this->baseUrl;?>/image/<?php echo $this->res[$i]['profile']?>"><?php echo $this->res[$i]['nickname']?></a>
 </div>
 <div class="new_weibo_content"> <?php echo $this->res[$i]['content']?> </div>
 <?php 
 if($this->res[$i]['image_url'] != Null){
 ?>
 <div class="new_weibo_picture">
-<A class="miniImg artZoom" href="image/<?php echo $this->res[$i]['image_url']?>" rel=image/a01.jpg><IMG class="small" src="image/<?php echo $this->res[$i]['image_url']?>"></A>
+<A class="miniImg artZoom" href="image/<?php echo $this->res[$i]['image_url']?>" rel=image/a01.jpg><IMG class="small" src="<?php echo $this->baseUrl;?>/image/<?php echo $this->res[$i]['image_url']?>"></A>
 </div>
 <?php 
 }

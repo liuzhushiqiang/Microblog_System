@@ -83,7 +83,9 @@ header 部分开始
 	 top: 40px;
 	 left: -50px;
 	 padding: 20px 20px;
-	 border:2px solid gray;
+	 border-bottom: 2px solid gray;
+	 border-left: 2px solid gray;
+	 border-right: 2px solid gray;
 	 z-index: 100;
 }
 
@@ -93,7 +95,9 @@ header 部分开始
 	position: absolute;
 	top:40px;
 	right:0px;
-	border:2px solid gray;
+	 border-bottom: 2px solid gray;
+	 border-left: 2px solid gray;
+	 border-right: 2px solid gray;
 	z-index: 100;
 }
 
@@ -122,7 +126,9 @@ header 部分开始
 	position: absolute;
 	top:40px;
 	right:0px;
-	border:2px solid gray;
+	 border-bottom: 2px solid gray;
+	 border-left: 2px solid gray;
+	 border-right: 2px solid gray;
 	z-index: 100;
 }
 /*
@@ -353,6 +359,7 @@ main 部分开始
 	width: 100px;
 	height: 100px;
 	float: left;
+	overflow: hidden;
 }
 
 .main_right_profile_name{
@@ -559,4 +566,10 @@ main 部分开始
 .main_right_intersting_people_profile_image img{
 	width:50px;
 	height:40px;
+}
+
+#page_bar{
+	height: 80px;
+	line-height: 30px;
+	font-size: 20px;
 }
