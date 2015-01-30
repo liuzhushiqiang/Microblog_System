@@ -13,7 +13,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl;?>/css/uploadify.css">
 
 
-<script type="text/javascript" src="<?php echo $this->baseUrl;?>/js/jquery-1.3.2.min.js"></script> 
+<script type="text/javascript" src="<?php echo $this->baseUrl;?>/js/jquery-2.1.3.js"></script> 
 
 <script type="text/javascript" src="<?php echo $this->baseUrl;?>/js/auto_refresh.js"></script>
 
@@ -40,10 +40,11 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	  $("#send_weibo_button").click(function(){
+	  		
 		  $.post("/index/sendweibo", {weibo_text:$("#send_weibo_textarea").val(),
-		  	 weibo_image:"",
+			 weibo_image:"",
 		  	 retransmitted_id:""}, function(){
-		  var d = new Date();
+		  	 	  var d = new Date();
 		  var temp='<div class="new_weibo"><div class="new_weibo_user_name"><a href="#"><img src="<?php echo $this->baseUrl;?>/image/'+ "<?php echo $_SESSION['nick_name'];?>" +'.jpg">'+ "<?php echo $_SESSION['nick_name'];?> "+'</a>'
 			+ '</div>'
 			+ '<div class="new_weibo_content"> ' + $("#send_weibo_textarea").val() + ' </div>'
@@ -57,7 +58,7 @@ $(document).ready(function(){
 			+ 'cursor="pointer">评论</span></div>';
 		$("#content").prepend(temp);
 		$("#send_weibo_textarea").val("");
-		  });
+		 });
 	  });
 	});
 
@@ -177,6 +178,9 @@ $(document).ready(function(){
 </a><input type="image" src="<?php echo $this->baseUrl;?>/image/send_weibo_button.png" id="send_weibo_button" />
 
 </div>
+
+<div id="send_weibo_with_super_function_hidden_panel"><div id="send_weibo_with_super_function_hidden_panel_arrow"></div><div id="send_weibo_with_super_function_hidden_panel_itemlist"><div id="send_weibo_with_super_function_hidden_panel_item"></div></div></div>
+
 <div class="top_tab">
 <div class="tab_item_active">
 <a href="#">我关注的</a>

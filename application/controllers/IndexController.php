@@ -93,9 +93,10 @@ class IndexController extends BaseController{
             $_REQUEST['weibo_text'], 
             $_REQUEST['weibo_image'], 
             $_REQUEST['retransmitted_id'])) {
-            $this->render("send_weibo_ajax");
+            //file_put_contents('debug.txt', "come here sendweibo?");
+            $this->render("sendweiboajax");
         } else {
-
+            
         }
     }
 

@@ -1,7 +1,7 @@
 <?php
 class BaseController extends Zend_Controller_Action{
 	public function init(){
-		//³õÊ¼»¯Êý¾Ý¿âÊÊÅäÆ÷
+		//åˆå§‹åŒ–æ•°æ®åº“é€‚é…å™¨
 		$url = constant("APPLICATION_PATH") . DIRECTORY_SEPARATOR .
 		'configs' . DIRECTORY_SEPARATOR . 'application.ini';
 		$dbconfig = new Zend_Config_Ini($url, "mysql");
