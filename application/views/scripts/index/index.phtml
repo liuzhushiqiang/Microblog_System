@@ -173,13 +173,30 @@ $(document).ready(function(){
 </div>
 <textarea class="send_weibo_textarea" id="send_weibo_textarea"></textarea>
 <div class="send_weibo_with_super_function">
-<a class="super_function_type" href="#"> <img
-	src="<?php echo $this->baseUrl;?>/image/super_function_type_01.png" /> 图片
-</a><input type="image" src="<?php echo $this->baseUrl;?>/image/send_weibo_button.png" id="send_weibo_button" />
+		<a class="super_function_type" href="#"> <img
+		src="<?php echo $this->baseUrl;?>/image/super_function_type_01.png" /> 图片
+		</a>
+
+		<div id="send_weibo_with_super_function_hidden_panel">
+	<div id="send_weibo_with_super_function_hidden_panel_arrow">
+		<img src="<?php echo $this->baseUrl;?>/image/send_weibo_with_super_function_hidden_panel_arrow.png"/>
+	</div>
+	<div id="send_weibo_with_super_function_hidden_panel_toplabel">
+		<div id="send_weibo_with_super_function_hidden_panel_toplabel_text">共0张，还能上传9张</div>
+		<div><img src="<?php echo $this->baseUrl;?>/image/send_weibo_with_super_function_hidden_panel_toplabel_close.png"></div>
+	</div>
+	<div id="send_weibo_with_super_function_hidden_panel_itemlist">
+		<div id="send_weibo_with_super_function_hidden_panel_item">
+
+		</div>
+	</div>
+
+	</div>
+	<input type="image" src="<?php echo $this->baseUrl;?>/image/send_weibo_button.png" id="send_weibo_button" />
 
 </div>
 
-<div id="send_weibo_with_super_function_hidden_panel"><div id="send_weibo_with_super_function_hidden_panel_arrow"></div><div id="send_weibo_with_super_function_hidden_panel_itemlist"><div id="send_weibo_with_super_function_hidden_panel_item"></div></div></div>
+
 
 <div class="top_tab">
 <div class="tab_item_active">

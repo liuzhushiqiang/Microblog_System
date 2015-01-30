@@ -573,3 +573,9 @@ main 部分开始
 	line-height: 30px;
 	font-size: 20px;
 }
+
+#send_weibo_with_super_function_hidden_panel{
+	
+	display: block;
+	background-color: green;
+}

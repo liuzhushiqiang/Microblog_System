@@ -128,11 +128,13 @@ function follow_button_mouse_out(obj){
 	ch.style.color = "#666666";
 }
 
-function add_image_in_weibo(){
-	var send_weibo_button = document.getElementById(
-		"send_weibo_button");
-	send_weibo_button.onclick(function() {
-		
+function send_weibo_add_images(){
+	var send_weibo_with_super_function_hidden_panel 
+	=document.getElementById(
+	 	"send_weibo_with_super_function_hidden_panel");
+	send_weibo_with_super_function_hidden_panel.onclick(function() {
+		send_weibo_with_super_function_hidden_panel.style.display 
+		= "block";
 	});
 }
 
