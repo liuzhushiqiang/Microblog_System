@@ -128,13 +128,20 @@ function follow_button_mouse_out(obj){
 	ch.style.color = "#666666";
 }
 
-function send_weibo_add_images(){
-	var send_weibo_with_super_function_hidden_panel 
-	=document.getElementById(
-	 	"send_weibo_with_super_function_hidden_panel");
-	send_weibo_with_super_function_hidden_panel.onclick(function() {
-		send_weibo_with_super_function_hidden_panel.style.display 
-		= "block";
-	});
+function super_function_type_onclick(obj)
+{
+	var current_send_weibo_with_super_function_hidden_panel 
+	= obj.nextSibling.nextSibling;
+	//window.alert(obj.nextSibling.nextSibling.nodeName);
+	if (current_send_weibo_with_super_function_hidden_panel.style
+	.display == "block") 
+	{
+		current_send_weibo_with_super_function_hidden_panel.style
+		.display = "none";
+	} 
+	else
+	{
+		current_send_weibo_with_super_function_hidden_panel.style
+		.display = "block";
+	}
 }
-
