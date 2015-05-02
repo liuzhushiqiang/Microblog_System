@@ -1,63 +1,25 @@
 <?php
-
-require_once APPLICATION_PATH.'/models/Mb_Post.php';
-require_once APPLICATION_PATH.'/models/Mb_Comment.php';
-require_once APPLICATION_PATH.'/util/PageClass.php';
-require_once APPLICATION_PATH.'/models/Mb_User.php';
-
 require_once 'BaseController.php';
+require_once APPLICATION_PATH . '/models/MbPost.php';
+require_once APPLICATION_PATH . '/models/MbUser.php';
 
-session_start();
+header("Connection: Keep-Alive");
 
-/**
- * to do:
- * http://www.cnblogs.com/jackluo/p/3728933.html
- * http://vistaswx.com/blog/article/php-server-push
- * http://tech.techweb.com.cn/thread-439108-1-1.html
- */
+if (!isset($_SESSION)) {
+    session_start();
+}
 
 class IndexController extends BaseController{
 
     public function indexAction()
     {
-        if (isset($_SESSION['user_id'])) {
-            /**
-             * 分页显示
-             */
-            $mb_post = new Mb_Post();
-            $rowsPerPage = 5;    //perPage recordes  
-            $curPage = 1;
-            if($this->_request->getParam('page')) {
-               $curPage = $this->_request->getParam('page');
-            }
-            //search data and display
-            $this->view->res = $mb_post->get_weibo(true, $rowsPerPage, 
-                ($curPage-1)*$rowsPerPage);
-            $rows = count($mb_post->get_weibo(false));
-            $Pager = new PageClass($rows,$rowsPerPage); 
-            $this->view->pagebar = $Pager->getNavigation();
-
-            //get friends
-            $this->view->friends = $mb_post->get_friends(0);  
-        
+        if (isset($_SESSION['uid'])) {
+            $mbUser = new MbUser();
+            $this->view->selfInfo = $mbUser->idGetUser($_SESSION['uid']);
             $this->render("index");
         } else {
-            //file_put_contents("debug.txt", "debug index index \r\n", FILE_APPEND);
-
-            if (isset($_COOKIE['user_email']) && isset($_COOKIE['user_password'])) {
-                //file_put_contents("debug.txt", "debug index index \r\n", FILE_APPEND);
-
-                $_REQUEST[email] = $_COOKIE['user_email'];
-                $_REQUEST[password] = base64_decode($_COOKIE['user_password']); 
-                $this->_forward("login", "login");
-            } else {
-                $this->render("login");
-            }
+            $this->_redirect('/login/showwelcome');
         }
-    }
-
-    public function forgetpasswordAction() {
-        $this->render("forgetpassword");
     }
 
     public function autorefreshAction(){
@@ -90,9 +52,9 @@ class IndexController extends BaseController{
     public function sendweiboAction() {
         $mb_post = new Mb_Post();
         if($mb_post->insert_post(
-            $_REQUEST['weibo_text'], 
-            $_REQUEST['weibo_image'], 
-            $_REQUEST['retransmitted_id'])) {
+            $_POST['weibo_text'], 
+            $_POST['weibo_image'], 
+            $_POST['retransmitted_id'])) {
             //file_put_contents('debug.txt', "come here sendweibo?");
             $this->render("sendweiboajax");
         } else {

@@ -370,7 +370,7 @@ class Zend_Loader_Autoloader
 
     /**
      * Add an autoloader to the beginning of the stack
-     *
+     * 
      * @param  object|array|string $callback PHP callback or Zend_Loader_Autoloader_Interface implementation
      * @param  string|array $namespace Specific namespace(s) under which to register callback
      * @return Zend_Loader_Autoloader

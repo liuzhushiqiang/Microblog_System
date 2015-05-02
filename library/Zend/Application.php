@@ -1,7 +1,7 @@
 <?php
 /**
  * Zend Framework
- *
+ * 
  * LICENSE
  *
  * This source file is subject to the new BSD license that is bundled

@@ -1,103 +1,164 @@
-drop database if exists microblog_system;
+drop database if exists mb;
 
-create database microblog_system;
+create database mb;
 
-use microblog_system;
+use mb;
 
 create table if not exists mb_user(
 	id int primary key AUTO_INCREMENT,
 	nickname varchar(20) not null,
 	pw varchar(50) not null,
 	email varchar(50) not null,
-	profile varchar(50) not NULL,
-  address varchar(50) not null,
-	create_date timestamp not null DEFAULT current_timestamp()
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1011;
+  gender char(2) not NULL,
+  address varchar(100),
+  phone_number varchar(20),
+  introduction varchar(256),
+  personal_tag varchar(256), 
+  work_at varchar(50),
+	profile_url varchar(256),
+  verified tinyint default 0,
+	create_datetime datetime not null
+) DEFAULT CHARSET=utf8 AUTO_INCREMENT=1000;
 
-INSERT INTO `mb_user` (`id`, `nickname`, `pw`, `email`, profile, address, `create_date`) VALUES
-(1000, 'shiqiang', md5('shiqiang'), 'shiqiang@shiqiang.com', 'shiqiang.jpg', '福建-厦门-集美', now()),
-(1001, 'jundong', md5('jundong'), 'jundong@jundong.com', 'jundong.jpg', '福建-厦门-集美', now()),
-(1002, 'borong', md5('borong'), 'borong@borong.com', 'borong.jpg', '福建-厦门-集美', now()),
-(1003, 'yulin', md5('yulin'), 'yulin@yulin.com', 'yulin.jpg', '福建-厦门-集美', now()),
-(1004, 'geek1', md5('geek1'), 'geek1@geek1.com', 'geek1.jpg', '福建-泉州-石狮', now()),
-(1005, 'geek2', md5('geek2'), 'geek2@geek2.com', 'geek2.jpg', '福建-泉州-石狮', now()),
-(1006, 'geek3', md5('geek3'), 'geek3@geek3.com', 'geek3.jpg', '福建-泉州-石狮', now()),
-(1007, 'geek4', md5('geek4'), 'geek4@geek4.com', 'geek4.jpg', '福建-泉州-石狮', now()),
-(1008, 'geek5', md5('geek5'), 'geek5@geek5.com', 'geek5.jpg', '福建-泉州-石狮', now()),
-(1009, 'geek6', md5('geek6'), 'geek6@geek6.com', 'geek6.jpg', '福建-泉州-石狮', now()),
-(1010, '2514881230', md5('2514881230'), '2514881230@qq.com', '2514881230.jpg', '福建-厦门-集美', now())
-;
+
+create table if not exists mb_user_delete(
+  id int primary key AUTO_INCREMENT,
+  nickname varchar(20) not null,
+  pw varchar(50) not null,
+  email varchar(50) not null,
+  gender char(2) not NULL,
+  address varchar(100),
+  phone_number varchar(20),
+  introduction varchar(256),
+  personal_tag varchar(256), 
+  work_at varchar(50),
+  profile_url varchar(256),
+  verified tinyint default 0,
+  create_datetime datetime not null
+) DEFAULT CHARSET=utf8 AUTO_INCREMENT=1000;
+
+create table if not exists mb_user_addinfo(
+  id int primary key auto_increment,
+  friend_category text,
+  privacy_settting tinyint,
+  notification_setting tinyint,
+  black_list text
+) default CHARSET=utf8 auto_increment = 1000;
 
 CREATE TABLE IF NOT EXISTS `mb_post` (
   `id` int primary key AUTO_INCREMENT,
-  `uid` int NOT NULL ,
-  `content` varchar(150) NOT NULL,
-  `image_url` varchar(150) DEFAULT NULL,
-  retransmitted_id int default null,
-  `create_time` timestamp NOT NULL DEFAULT current_timestamp(),
-  foreign key (uid) references mb_user(id)
-  ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1010;
-
-insert into mb_post(id, uid, content, image_url, retransmitted_id, create_time) values
-  (1, 1000, "Today is sunny!", "sunny.jpg", 3, now()),
-  (2, 1000, "Today is rainy!", NULL, null, now()),
-  (3, 1001, "Today is snowy!", NULL, null, now()),
-  (4, 1003, "A beautiful Day!", null, null, now())
-;
+  `uid` int not null,
+  `content` text NOT NULL,
+  `images_url` text,
+  retransmission_id int,
+  topic_id int,
+  `create_time` datetime NOT NULL
+) DEFAULT CHARSET=utf8 AUTO_INCREMENT=1000;
 
 CREATE TABLE IF NOT EXISTS `mb_user_relation` (
   `uid` int NOT NULL,
-  `fid` int NOT NULL,
+  `fid` int not null,
+  friend_category varchar(20),
   `id` int primary key AUTO_INCREMENT,
-  create_time timestamp default current_timestamp() not null,
-  foreign key (uid) references mb_user(id),
-  foreign key (fid) references mb_user(id)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1010;
-
-INSERT INTO `mb_user_relation` (`uid`, `fid`, `id`) VALUES
-(1000, 1001, 1),
-(1000, 1002, 2),
-(1001, 1000, 3)
-;
+  remark_name varchar(20),
+  create_time datetime not null
+) DEFAULT CHARSET=utf8 AUTO_INCREMENT=1000;
 
 create table if not exists mb_comment(
 id int primary key auto_increment,
 pid int not null,
 uid int not null,
-content varchar(150) not null,
-create_date timestamp not null default current_timestamp(),
-foreign key (pid) references mb_post(id),
-foreign key (uid) references mb_user(id)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1010;
+content text not null,
+create_date datetime not null
+) DEFAULT CHARSET=utf8 AUTO_INCREMENT=1000;
 
-insert into mb_comment(pid, uid, content) values
-	(1, 1001, "play basketball"),
-	(1, 1002, "go swimming");
-
-CREATE TABLE IF NOT EXISTS `mb_message_private` (
+CREATE TABLE IF NOT EXISTS `mb_private_message` (
   `id` int primary key AUTO_INCREMENT,
   `uid` int NOT NULL,
-  fid int not null,
-  `content` varchar(150) NOT NULL,
-  `create_time` timestamp NOT NULL DEFAULT current_timestamp(),
-  foreign key (uid) references mb_user(id),
-  foreign key (fid) references mb_user(id)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1010;
+  pid int not null,
+  `content` text NOT NULL,
+  `create_time` datetime NOT NULL
+) DEFAULT CHARSET=utf8 AUTO_INCREMENT=1000;
 
 CREATE TABLE IF NOT EXISTS `mb_message_at` (
   `id` int primary key AUTO_INCREMENT,
   `uid` int NOT NULL,
-  fid int not null,
   `pid` int NOT NULL,
-  `create_time` timestamp NOT NULL DEFAULT current_timestamp(),
-  foreign key (uid) references mb_user(id), 
-  foreign key (fid) references mb_user(id),
-  foreign key (pid) references mb_post(id)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1010;
+  `create_time` datetime NOT NULL
+) DEFAULT CHARSET=utf8 AUTO_INCREMENT=1000;
 
-create table if not exists mb_collect(
+create table if not exists mb_collection(
   id int primary key auto_increment,
+  uid int not null,
   pid int not null,
-  create_time timestamp default current_timestamp() not NULL,
-  foreign key (pid) references mb_post(id)
-  ) engine=innodb default CHARSET=utf8 auto_increment=1010;
+  create_time datetime not NULL
+  ) default CHARSET=utf8 auto_increment=1000;
+
+create table if not exists mb_love(
+  id int primary key auto_increment,
+  uid int not null,
+  pid int not null,
+  create_time datetime not null
+) default CHARSET=utf8 auto_increment=1000;
+
+create table if not exists mb_user_advice(
+  id int primary key auto_increment,
+  uid int not null,
+  content text not null,
+  image_url text,
+  create_time datetime not null
+) default CHARSET=utf8 auto_increment=1000;
+
+create table if not exists mb_veri_info(
+  id int primary key auto_increment,
+  uid int not null,
+  veri_type tinyint not null,
+  citizen_id_name varchar(20) not null,
+  citizen_id_num varchar(20) not null,
+  phone_number varchar(20) not null,
+  veri_reason text not null,
+  veri_file_url varchar(256) not null,
+  veri_status tinyint not null,
+  create_time datetime not null
+) default CHARSET=utf8 auto_increment=1000;
+
+create table if not exists mb_topic(
+  id int primary key auto_increment,
+  create_uid int not null,
+  topic_name varchar(256) not null,
+  topic_image varchar(256),
+  create_time datetime not null
+) default CHARSET=utf8 auto_increment=1000;
+
+create table if not exists mb_user_reported(
+  id int primary key auto_increment,
+  uid int not null,
+  reported_uid int not null,
+  status tinyint not null,
+  reported_content text not null,
+  create_time datetime not null
+) default CHARSET=utf8 auto_increment=1000;
+
+create table if not exists mb_post_reported(
+  id int primary key auto_increment,
+  uid int not null,
+  reported_pid int not null,
+  reported_content text not null,
+  status tinyint not null,
+  create_time datetime not null
+) default CHARSET=utf8 auto_increment=1000;
+
+create table if not exists mb_sys_message(
+  id int primary key auto_increment,
+  uid int not null,
+  sender_uid int not null,
+  content text not null,
+  mess_type tinyint not null,
+  create_time datetime not null
+) default CHARSET=utf8 auto_increment=1000
+
+
+
+
+
+

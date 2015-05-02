@@ -2,249 +2,42 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl;?>/css/index.css">
-<link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl;?>/css/artZoom.css">
+<link type="image/x-icon" rel="shortcut icon" href="<?php echo $this->baseUrl;?>/image/index/favicon.ico" />
 
-<link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl;?>/css/send_message.css">
+<link rel="stylesheet" type="text/css" href="/css/utils/window.css">
+<link rel="stylesheet" type="text/css" href="/css/index.css">
+<link rel="stylesheet" type="text/css" href="/css/utils/weiboContent.css">
+<link rel="stylesheet" type="text/css" href="/css/utils/header.css">
+<link rel="stylesheet" type="text/css" href="/css/utils/mainRight.css">
+<link rel="stylesheet" type="text/css" href="/css/utils/sendWeibo.css">
+<link rel="stylesheet" type="text/css" href="/css/utils/footer.css">
 
-<script src="<?php echo $this->baseUrl;?>/js/jquery.uploadify.min.js" type="text/javascript"></script>
-<link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl;?>/css/uploadify.css">
-
-
-<script type="text/javascript" src="<?php echo $this->baseUrl;?>/js/jquery-2.1.3.js"></script> 
-
-<script type="text/javascript" src="<?php echo $this->baseUrl;?>/js/auto_refresh.js"></script>
-
-<script type="text/javascript" src="<?php echo $this->baseUrl;?>/js/index.js"></script>
-
-
-
-<script type="text/javascript" src="<?php echo $this->baseUrl;?>/js/send_message.js"></script>
-
-
-<script type="text/javascript" src="<?php echo $this->baseUrl;?>/js/artZoom.js"></script>
-
-<script type="text/javascript">jQuery('a.artZoom').artZoom();</script>
-
-<script type="text/javascript" src="<?php echo $this->baseUrl;?>/js/scrollpagination.js"></script>
+<script type="text/javascript" src="/js/utils/jquery-2.1.3.js"></script>
+<script type="text/javascript" src="/js/utils/JSDump.js"></script>
+<script type="text/javascript" src="/js/utils/JqueryDump.js"></script>
+<script type="text/javascript" src="/js/utils/showOneWeibo.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+<script type="text/javascript" src="/js/utils/header.js"></script>
+<script type="text/javascript" src="/js/utils/mainRight.js"></script>
+<script type="text/javascript" src="/js/utils/weiboContent.js"></script>
+<script type="text/javascript" src="/js/plupload/plupload.full.min.js"></script>
+<script type="text/javascript" src="/js/utils/sendWeibo.js"></script>
 <script type="text/javascript">
-
-
-$(document).ready(function(){
-	  $("#comment").click(function(){
-		$("#msgBox").toggle();
-	  });
-	});
-
-$(document).ready(function(){
-	  $("#send_weibo_button").click(function(){
-	  		
-		  $.post("/index/sendweibo", {weibo_text:$("#send_weibo_textarea").val(),
-			 weibo_image:"",
-		  	 retransmitted_id:""}, function(){
-		  	 	  var d = new Date();
-		  var temp='<div class="new_weibo"><div class="new_weibo_user_name"><a href="#"><img src="<?php echo $this->baseUrl;?>/image/'+ "<?php echo $_SESSION['nick_name'];?>" +'.jpg">'+ "<?php echo $_SESSION['nick_name'];?> "+'</a>'
-			+ '</div>'
-			+ '<div class="new_weibo_content"> ' + $("#send_weibo_textarea").val() + ' </div>'
-			+ '<div class="weibo_info">'
-			+ '<div class="date_time">'
-			+ '<a href="#">' + d + '</a>'
-			+ '</div>'
-			+ '<div class="from_address"> 来自网站 </div>'
-			+ '<div class="comment_and_retransmission">'
-			+ '<a href="#">转发</a> | <a href="#">收藏</a> | <span id="comment"'
-			+ 'cursor="pointer">评论</span></div>';
-		$("#content").prepend(temp);
-		$("#send_weibo_textarea").val("");
-		 });
-	  });
-	});
-
-
-	$(document).ready(function(){
-		  $("#main_right_intersting_people_follow_button").click(function(){
-			  $.post("/index/jiaguanzhu", {uid1:1000,
-		  	 uid2:1004} ,function(){
-				  $("#main_right_intersting_people_follow_button").html("取消关注");
-			  });
-		  });
-		});
-
-
-
+	alert(jQuery.fn);
+	$.dump(jQuery.fn);
+	dump(jQuery.fn);
 </script>
-
 </head>
 <body>
-<div id="header">
-<div class="header_content">
-<div class="header_nav">
-<a href="#"> <img src="<?php echo $this->baseUrl;?>/image/home_header_logo.png" alt="logo" />
-</a>
-<ul>
-<li onmouseover="header_nav_hover(this)"
-	onmouseout="header_nav_out(this)" class="header_current_page"> <a
-	href="#" target="_self">首页</a></li>
-<li onmouseover="show_apps_list(this)" onmouseout="hide_apps_list(this)"
-	id="apps"><a href="#" target="_self">热门</a> <div
-	class="header_apps_list" id="header_apps_list">
-<div class="app_link">
-<a href="#"> <img src="<?php echo $this->baseUrl;?>/image/app01.png" alt="app1" /> 群组
-</a>
-</div>
-<div class="app_link">
-<a href="#"> <img src="<?php echo $this->baseUrl;?>/image/app01.png" alt="app1" /> 更多应用
-</a>
-</div>
-</div></li>
-<li onmouseover="show_apps_list(this)" onmouseout="hide_apps_list(this)"
-	id="apps"><a href="#" target="_self">应用</a> <div
-	class="header_apps_list" id="header_apps_list">
-<div class="app_link">
-<a href="#"> <img src="<?php echo $this->baseUrl;?>/image/app01.png" alt="app1" /> 群组
-</a>
-</div>
-<div class="app_link">
-<a href="#"> <img src="<?php echo $this->baseUrl;?>/image/app01.png" alt="app1" /> 更多应用
-</a>
-</div>
-</div></li>
-<li onmouseover="show_apps_list(this)" onmouseout="hide_apps_list(this)"
-	id="apps"><a href="#" target="_self">游戏</a> <div
-	class="header_apps_list" id="header_apps_list">
-<div class="app_link">
-<a href="#"> <img src="<?php echo $this->baseUrl;?>/image/app01.png" alt="app1" /> 群组
-</a>
-</div>
-<div class="app_link">
-<a href="#"> <img src="<?php echo $this->baseUrl;?>/image/app01.png" alt="app1" /> 更多应用
-</a>
-</div>
-</div></li>
-</ul>
-
-</div>
-<div class="header_right">
-<div class="header_search">
-	<form action="/index/sousuo" method="get">
-<input class="search_text" type="text" name="key_word" value="搜微博"
-	onfocus="this.value = ''" onblur="this.value = '搜微博 / 昵称 / 标签'" /> <input
-	class="search_button" type="image" src="<?php echo $this->baseUrl;?>/image/home_header_search.png"
-	alt="submit">
-</form>
-</div>
-<ul>
-<li onmouseover="header_nav_hover(this)"
-	onmouseout="header_nav_out(this)"><a href="#" target="_self"><?php echo $_SESSION['nick_name']?></a></li>
-<li onmouseover="show_message_list(this)"
-	onmouseout="hide_message_list(this)" id="message"><a href="#"
-	target="_self">消息</a>
-<div class="header_message_list" id="header_message_list">
-<div class="header_list_a_line">
-<a href="#"> 被转发 </a>
-</div>
-
-</div></li>
-<li onmouseover="show_account_list(this)"
-	onmouseout="hide_account_list(this)" id="account"><a href="#"
-	target="_self">账号</a>
-<div class="header_account_list" id="header_account_list">
-<div class="header_list_a_line">
-<a href="#">设置</a>
-</div>
-<div class="header_list_a_line">
-<a href="<?php echo $this->baseURl;?>/login/logout">退出</a>
-</div>
-
-</div></li>
-</ul>
-</div>
-</div>
-</div>
+<?php
+	require_once APPLICATION_PATH . '/views/scripts/utils/header.phtml';
+?>
 <div class="main_wrap" id="main_wrap">
- <div class="main_left" id="main_left">
-<div class="send_weibo_tips_top">
-<div class="send_weibo_tips_top_left"> 分享是一种态度~ </div>
-<!--<div class="send_weibo_tips_top_right">
-可以输入<span class="send_weibo_tips_top_right_num">140</span>个字
-</div>-->
-</div>
-<textarea class="send_weibo_textarea" id="send_weibo_textarea"></textarea>
-<div class="send_weibo_with_super_function">
-	<a class="super_function_type" href="#" onclick="super_function_type_onclick(this)"> <img
-	src="<?php echo $this->baseUrl;?>/image/super_function_type_01.png" /> 图片
-	</a>
+<div class="main_left" id="main_left">
 
-	<div class="send_weibo_with_super_function_hidden_panel">
-		<div id="send_weibo_with_super_function_hidden_panel_arrow">
-			<img src="<?php echo $this->baseUrl;?>/image/send_weibo_with_super_function_hidden_panel_arrow.png"/>
-		</div>
-		<div id="send_weibo_with_super_function_hidden_panel_wrap">
-			<div id="send_weibo_with_super_function_hidden_panel_toplabel">
-				<span id="send_weibo_with_super_function_hidden_panel_toplabel_text">共 0 张，还能上传 9 张</span>
-				<span><a href="#"><img src="<?php echo $this->baseUrl;?>/image/send_weibo_with_super_function_hidden_panel_toplabel_close.png"></a></span>
-			</div>
-			<div id="send_weibo_with_super_function_hidden_panel_itemlist">
-				
-	            <div id="send_weibo_with_super_function_hidden_panel_item">
-	            	<img id="send_weibo_with_super_function_hidden_panel_item_image_preview" src="<?php echo $this->baseUrl?>/image/geek4.jpg"/>
-					<a href="#"><div id="send_weibo_with_super_function_hidden_panel_item_delete_image">
-						<div id="send_weibo_with_super_function_hidden_panel_item_delete_image_text">删除</div>
-					</div></a>
-				</div>
-
-				<div id="send_weibo_with_super_function_hidden_panel_item">
-	            	<img id="send_weibo_with_super_function_hidden_panel_item_image_preview" src="<?php echo $this->baseUrl?>/image/geek4.jpg"/>
-					<a href="#"><div id="send_weibo_with_super_function_hidden_panel_item_delete_image">
-						<div id="send_weibo_with_super_function_hidden_panel_item_delete_image_text">删除</div>
-					</div></a>
-				</div>
-
-				<div id="send_weibo_with_super_function_hidden_panel_item">
-	            	<img id="send_weibo_with_super_function_hidden_panel_item_image_preview" src="<?php echo $this->baseUrl?>/image/geek4.jpg"/>
-					<a href="#"><div id="send_weibo_with_super_function_hidden_panel_item_delete_image">
-						<div id="send_weibo_with_super_function_hidden_panel_item_delete_image_text">删除</div>
-					</div></a>
-				</div>
-
-				<div id="send_weibo_with_super_function_hidden_panel_item">
-	            	<img id="send_weibo_with_super_function_hidden_panel_item_image_preview" src="<?php echo $this->baseUrl?>/image/geek4.jpg"/>
-					<a href="#"><div id="send_weibo_with_super_function_hidden_panel_item_delete_image">
-						<div id="send_weibo_with_super_function_hidden_panel_item_delete_image_text">删除</div>
-					</div></a>
-				</div>
-
-				<div id="send_weibo_with_super_function_hidden_panel_item">
-	            	<img id="send_weibo_with_super_function_hidden_panel_item_image_preview" src="<?php echo $this->baseUrl?>/image/geek4.jpg"/>
-					<a href="#"><div id="send_weibo_with_super_function_hidden_panel_item_delete_image">
-						<div id="send_weibo_with_super_function_hidden_panel_item_delete_image_text">删除</div>
-					</div></a>
-				</div>
-
-				<div id="send_weibo_with_super_function_hidden_panel_item">
-	            	<img id="send_weibo_with_super_function_hidden_panel_item_image_preview" src="<?php echo $this->baseUrl?>/image/geek4.jpg"/>
-					<a href="#"><div id="send_weibo_with_super_function_hidden_panel_item_delete_image">
-						<div id="send_weibo_with_super_function_hidden_panel_item_delete_image_text">删除</div>
-					</div></a>
-				</div>
-				
-
-
-				<div id="send_weibo_with_super_function_hidden_panel_item">
-					<a href="#"><div id="send_weibo_with_super_function_hidden_panel_item_add_image"><img src="<?php echo $this->baseUrl;?>/image/send_weibo_with_super_function_hidden_panel_item_add_image.png"/></div></a>
-				</div>
-
-				<div class="div_clear"></div>
-
-			</div>
-		</div>
-	</div>
-
-	<input type="image" src="<?php echo $this->baseUrl;?>/image/send_weibo_button.png" id="send_weibo_button" />
-
-</div>
-
-
+<?php 
+	require_once APPLICATION_PATH . '/views/scripts/utils/sendWeibo.phtml';
+?>
 
 <div class="top_tab">
 <div class="tab_item_active">
@@ -257,221 +50,19 @@ $(document).ready(function(){
 <a href="#">朋友圈</a>
 </div>
 </div>
-<div class="content" id="content">
+
 <?php 
-if(count($this->res) > 0){
-	for($i = 0; $i < count($this->res); $i++){
+	require_once APPLICATION_PATH . '/views/scripts/utils/weiboContent.phtml';
 ?>
-<div class="new_weibo">
-<div class="new_weibo_user_name">
-<a href="#"><img src="<?php echo $this->baseUrl;?>/image/<?php echo $this->res[$i]['profile']?>"><?php echo $this->res[$i]['nickname']?></a>
-</div>
-<div class="new_weibo_content"> <?php echo $this->res[$i]['content']?> </div>
-<?php 
-if($this->res[$i]['image_url'] != Null){
-?>
-<div class="new_weibo_picture">
-<A class="miniImg artZoom" href="<?php echo $this->baseUrl;?>/image/<?php echo $this->res[$i]['image_url']?>" rel=<?php echo $this->baseUrl;?>/image/a01.jpg><IMG class="small" src="<?php echo $this->baseUrl;?>/image/<?php echo $this->res[$i]['image_url']?>"></A>
-</div>
-<?php 
-}
-?>
-<div class="weibo_info">
-<div class="date_time">
-<a href="#"><?php echo $this->res[$i]['create_time']?></a>
-</div>
-<div class="from_address"> 来自网站 </div>
-
-<div class="comment_and_retransmission">
-<a href="#">转发</a> | <a href="#">收藏</a> | <span id="comment"
-	cursor="pointer">评论</span>
-	
-</div>
-
-
-
-<!-- 
-这里是评论开始
--->
-<?php if($i == 0){?>
-<div id="msgBox">
-<form>
-<h2>发表评论</h2>
-<div>
-<input id="userName" class="f-text" value="shiqiang" type="hidden"/>
-<p id="face"><img src="<?php echo $this->baseUrl;?>/image/shiqiang_pinglun.png" class="current" /></p>
-</div>
-<div><input id="conBox" class="f-text"></div>
-<div class="tr">
-<p>
-<span class="countTxt">还能输入</span><strong class="maxNum">140</strong><span>个字</span>
-<input id="sendBtn" type="button" value="发 表" title="快捷键 Ctrl+Enter" />
-</p>
-</div>
-</form>
-<div class="list">
-<h3><span>所有评论</span></h3>
-<ul>
-
-</ul>
-</div>
-</div>
-<?php }?>
-<!-- 
-这里是评论结束
--->
-
-
-</div>
-</div>
-<?php 
-	}
-}
-?>
-</div>
-<div class="page" id="page_bar">
-    <?php echo $this->pagebar; ?>
-</div>
-<!--<div class="loading" id="loading">Wait a moment... it's loading!</div>
-<div class="loading" id="nomoreresults">Sorry, no more results for your pagination demo.</div> -->
-</div>
-
-<div class="main_right" id="main_right">
-<div class="main_right_profile">
-<div class="main_right_profile_image">
-<a href="#"> <img src="<?php echo $this->baseUrl;?>/image/<?php echo $_SESSION['nick_name']?>.jpg" />
-</a>
-</div>
-<div class="main_right_profile_name">
-<a href="#"> <?php echo $_SESSION['nick_name']?></a>
-</div>
-<div class="main_right_profile_reputation"> 经验：77点 </div>
-<div class="main_right_profile_reputation"> 财富：339点 </div>
-</div>
-<div class="main_right_link_info">
-<div class="main_right_link_info_item"
-	onmouseover="link_info_item_mouse_over(this)"
-	onmouseout="link_info_item_mouse_out(this)">
-<a href="/index/myweibo" target="_blank">微博<br />
-</a>
-</div>
-<div class="main_right_link_info_item"
-	onmouseover="link_info_item_mouse_over(this)"
-	onmouseout="link_info_item_mouse_out(this)">
-<a href="/index/wodeshoucang" target="_blank">收藏<br />
-</a>
-</div>
-<div class="main_right_link_info_item"
-	onmouseover="link_info_item_mouse_over(this)"
-	onmouseout="link_info_item_mouse_out(this)">
-<a href="/index/my_following_user" target="_blank">关注<br />
-</a>
-</div>
-<div class="main_right_link_info_item"
-	onmouseover="link_info_item_mouse_over(this)"
-	onmouseout="link_info_item_mouse_out(this)">
-<a href="/index/follow_me_user" target="_blank">粉丝<br />
-</a>
-</div>
-</div>
-<div class="main_right_intersting_people">
-<div class="main_right_title">
-<div class="main_right_title_left"> 可能感兴趣的人 </div>
-<div class="main_right_title_right">
-<a href="#">换一批</a>
-</div>
 </div>
 
 <?php 
-for($a = 0; $a < count($this->friends); $a++){
+	require_once APPLICATION_PATH . '/views/scripts/utils/mainRight.phtml';
 ?>
-<div class="main_right_intersting_people_item">
-<div class="main_right_intersting_people_profile_image">
-<a href="#"> <img
-	src="<?php echo $this->baseUrl;?>/image/<?php echo $this->friends[$a]['profile']?>"></a>
+<div class="clear"></div>
 </div>
-<div class="main_right_intersting_people_profile_name">
-<a href=""><?php echo $this->friends[$a]['nickname']?></a>
-</div>
-<div class="main_right_intersting_people_profile_intro"> jundong也关注他 </div>
-<div class="main_right_intersting_people_follow_button" id="main_right_intersting_people_follow_button" 
-	onmouseover="follow_button_mouse_over(this)"
-	onmouseout="follow_button_mouse_out(this)" 
-	>
-<a >+关注</a>
-</div>
-</div>
-<?php }?>
-
-</div>
-<div class="main_right_intersting_topic">
-<div class="main_right_title">
-<div class="main_right_title_left"> 热门话题 </div>
-</div>
-<div class="intersting_topic_item">
-<div class="intersting_topic_item_left">
-<a href="#">#世界杯激战正酣#</a>
-</div>
-<div class="intersting_topic_item_right"> 310万 </div>
-</div>
-<div class="intersting_topic_item">
-<div class="intersting_topic_item_left">
-<a href="#">#世界杯激战正酣#</a>
-</div>
-<div class="intersting_topic_item_right"> 310万 </div>
-</div>
-<div class="intersting_topic_item">
-<div class="intersting_topic_item_left">
-<a href="#">#世界杯激战正酣#</a>
-</div>
-<div class="intersting_topic_item_right"> 310万 </div>
-</div>
-</div>
-</div>
-<div class="div_clear"></div>
-</div>
-<div id="footer">
-<div class="footer_item">
-<div class="footer_item_topic"> 手机玩微博 </div>
-<div class="footer_item_link_item">
-<a href="#">Android客户端</a>
-</div>
-<div class="footer_item_link_item">
-<a href="#">iPhone客户端</a>
-</div>
-</div>
-<div class="footer_item">
-<div class="footer_item_topic"> 开发者中心 </div>
-<div class="footer_item_link_item">
-<a href="#">开发者认证</a>
-</div>
-<div class="footer_item_link_item">
-<a href="#">开发者文档</a>
-</div>
-</div>
-<div class="footer_item">
-<div class="footer_item_topic"> 意见和交流 </div>
-<div class="footer_item_link_item">
-<a href="#">问题反馈</a>
-</div>
-<div class="footer_item_link_item">
-<a href="#">联系客服</a>
-</div>
-</div>
-<div class="footer_item">
-<div class="footer_item_topic"> 关于我们 </div>
-<div class="footer_item_link_item">
-<a href="#">公司介绍</a>
-</div>
-<div class="footer_item_link_item">
-<a href="#">加入我们</a>
-</div>
-</div>
-<div class="copy_right_info">
-<div class="copy_right_info_left"> &copy2012ZHishiSoft All Rights
-Reserved. </div>
-<div class="copy_right_info_right"> Powered By ThinkSNS </div>
-</div>
-</div>
+<?php 
+	require_once APPLICATION_PATH . '/views/scripts/utils/footer.phtml';
+?>
 </body>
 </html>
