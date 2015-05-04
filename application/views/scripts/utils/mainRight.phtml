@@ -1,0 +1,92 @@
+<div class="main_right" id="main_right">
+<div class="main_right_profile">
+<div class="main_right_profile_image">
+<a href="#"> <img src="<?php echo $this->selfInfo->profile_url ?>" />
+</a>
+</div>
+<div class="main_right_profile_name">
+<a href="#"> <?php echo $this->selfInfo->nickname?></a>
+</div>
+<div class="main_right_profile_reputation"> 经验：77点 </div>
+<div class="main_right_profile_reputation"> 财富：339点 </div>
+</div>
+<div class="main_right_link_info">
+<div class="main_right_link_info_item"
+	onmouseover="link_info_item_mouse_over(this)"
+	onmouseout="link_info_item_mouse_out(this)">
+<a href="/index/myweibo" target="_blank">微博<br />
+</a>
+</div>
+<div class="main_right_link_info_item"
+	onmouseover="link_info_item_mouse_over(this)"
+	onmouseout="link_info_item_mouse_out(this)">
+<a href="/index/wodeshoucang" target="_blank">收藏<br />
+</a>
+</div>
+<div class="main_right_link_info_item"
+	onmouseover="link_info_item_mouse_over(this)"
+	onmouseout="link_info_item_mouse_out(this)">
+<a href="/index/my_following_user" target="_blank">关注<br />
+</a>
+</div>
+<div class="main_right_link_info_item"
+	onmouseover="link_info_item_mouse_over(this)"
+	onmouseout="link_info_item_mouse_out(this)">
+<a href="/index/follow_me_user" target="_blank">粉丝<br />
+</a>
+</div>
+</div>
+<div class="main_right_intersting_people">
+<div class="main_right_title">
+<div class="main_right_title_left"> 可能感兴趣的人 </div>
+<div class="main_right_title_right">
+<a href="#">换一批</a>
+</div>
+</div>
+
+<?php 
+for($a = 0; $a < count($this->friends); $a++){
+?>
+<div class="main_right_intersting_people_item">
+<div class="main_right_intersting_people_profile_image">
+<a href="#"> <img
+	src="<?php echo $this->baseUrl;?>/image/user_profile/<?php echo $this->friends[$a]['profile']?>"></a>
+</div>
+<div class="main_right_intersting_people_profile_name">
+<a href=""><?php echo $this->friends[$a]['nickName']?></a>
+</div>
+<div class="main_right_intersting_people_profile_intro"> jundong也关注他 </div>
+<div class="main_right_intersting_people_follow_button" id="main_right_intersting_people_follow_button" 
+	onmouseover="follow_button_mouse_over(this)"
+	onmouseout="follow_button_mouse_out(this)" 
+	>
+<a href="">+关注</a>
+</div>
+</div>
+<?php }?>
+
+</div>
+<div class="main_right_intersting_topic">
+<div class="main_right_title">
+<div class="main_right_title_left"> 热门话题 </div>
+</div>
+<div class="intersting_topic_item">
+<div class="intersting_topic_item_left">
+<a href="#">#世界杯激战正酣#</a>
+</div>
+<div class="intersting_topic_item_right"> 310万 </div>
+</div>
+<div class="intersting_topic_item">
+<div class="intersting_topic_item_left">
+<a href="#">#世界杯激战正酣#</a>
+</div>
+<div class="intersting_topic_item_right"> 310万 </div>
+</div>
+<div class="intersting_topic_item">
+<div class="intersting_topic_item_left">
+<a href="#">#世界杯激战正酣#</a>
+</div>
+<div class="intersting_topic_item_right"> 310万 </div>
+</div>
+</div>
+</div>

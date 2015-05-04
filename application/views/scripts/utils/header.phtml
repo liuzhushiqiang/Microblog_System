@@ -1,0 +1,86 @@
+<div id="header">
+<div class="header_content">
+<div class="header_nav">
+<a href="javascript:void(0)"> <img src="<?php echo $this->baseUrl;?>/image/index/home_header_logo.png" alt="logo" />
+</a>
+<ul>
+<li onmouseover="header_nav_hover(this)"
+	onmouseout="header_nav_out(this)" class="header_current_page"> <a
+	href="#" target="_self">首页</a></li>
+<li onmouseover="show_apps_list(this)" onmouseout="hide_apps_list(this)"
+	id="apps"><a href="#" target="_self">热门</a> <div
+	class="header_apps_list" id="header_apps_list">
+<div class="app_link">
+<a href="#"> <img src="<?php echo $this->baseUrl;?>/image/app_logo/app01.png" alt="app1" /> 群组
+</a>
+</div>
+<div class="app_link">
+<a href="#"> <img src="<?php echo $this->baseUrl;?>/image/app_logo/app01.png" alt="app1" /> 更多应用
+</a>
+</div>
+</div></li>
+<li onmouseover="show_apps_list(this)" onmouseout="hide_apps_list(this)"
+	id="apps"><a href="#" target="_self">应用</a> <div
+	class="header_apps_list" id="header_apps_list">
+<div class="app_link">
+<a href="#"> <img src="<?php echo $this->baseUrl;?>/image/app_logo/app01.png" alt="app1" /> 群组
+</a>
+</div>
+<div class="app_link">
+<a href="#"> <img src="<?php echo $this->baseUrl;?>/image/app_logo/app01.png" alt="app1" /> 更多应用
+</a>
+</div>
+</div></li>
+<li onmouseover="show_apps_list(this)" onmouseout="hide_apps_list(this)"
+	id="apps"><a href="#" target="_self">游戏</a> <div
+	class="header_apps_list" id="header_apps_list">
+<div class="app_link">
+<a href="#"> <img src="<?php echo $this->baseUrl;?>/image/app_logo/app01.png" alt="app1" /> 群组 
+	
+</a>
+</div>
+<div class="app_link">
+<a href="#"> <img src="<?php echo $this->baseUrl;?>/image/app_logo/app01.png" alt="app1" /> 更多应用
+</a>
+</div>
+</div></li>
+</ul>
+
+</div>
+<div class="header_right">
+<div class="header_search">
+	<form action="/index/sousuo" method="get">
+<input class="search_text" type="text" name="key_word" value="搜微博"
+	onfocus="this.value = ''" onblur="this.value = '搜微博 / 昵称 / 标签'" /> <input
+	class="search_button" type="image" src="<?php echo $this->baseUrl;?>/image/index/home_header_search.png"
+	alt="submit">
+</form>
+</div>
+<ul>
+<li onmouseover="header_nav_hover(this)"
+	onmouseout="header_nav_out(this)"><a href="#" target="_self"><?php echo $_SESSION['nickName']?></a></li>
+<li onmouseover="show_message_list(this)"
+	onmouseout="hide_message_list(this)" id="message"><a href="#"
+	target="_self">消息</a>
+<div class="header_message_list" id="header_message_list">
+<div class="header_list_a_line">
+<a href="#"> 被转发 </a>
+</div>
+
+</div></li>
+<li onmouseover="show_account_list(this)"
+	onmouseout="hide_account_list(this)" id="account"><a href="#"
+	target="_self">账号</a>
+<div class="header_account_list" id="header_account_list">
+<div class="header_list_a_line">
+<a href="#">设置</a>
+</div>
+<div class="header_list_a_line">
+<a href="<?php echo $this->baseURl;?>/login/logout">退出</a>
+</div>
+
+</div></li>
+</ul>
+</div>
+</div>
+</div>

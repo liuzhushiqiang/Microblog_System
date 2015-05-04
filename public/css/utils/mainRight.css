@@ -1,0 +1,175 @@
+.main_right{
+	width: 230px;
+	margin-left: 1px;
+	padding:20px 20px;
+	background: #F8F8F8;
+	right: 0px;
+	top: 0px;
+	float: right;
+}
+
+.main_right_profile{
+	width: 230px;
+	height: 100px;
+}
+
+.main_right_profile_image{
+	width: 100px;
+	height: 100px;
+	float: left;
+	overflow: hidden;
+}
+
+.main_right_profile_image img{
+	width: 100px;
+	height: 100px;
+}
+
+.main_right_profile_name{
+	width: 120px;
+	height: 30px;
+	margin-left: 10px;
+	font-weight: bold;
+	float: left;
+}
+
+.main_right_profile_name a{
+	color: #3366CC;
+}
+
+.main_right_profile_reputation{
+	width: 120px;
+	height: 20px;
+	margin-left: 10px;
+	color: #666666;
+	line-height: 30px;
+	float: left;
+}
+
+.main_right_link_info{
+	width: 230px;
+	height: 42px;
+	margin-top: 10px;
+}
+
+.main_right_link_info_item{
+	width: 56px;
+	height: 42px;
+	line-height: 21px;
+	border-right: 1px solid #CCCCCC;
+	text-align: center;
+	float: left;
+}
+
+.main_right_link_info_item_last{
+	border: none;
+}
+
+.main_right_intersting_people{
+	border-top: 2px solid #CCCCCC;
+	margin-top: 20px;
+	padding-top: 20px;
+}
+
+.main_right_title{
+	width: 230px;
+	height: 20px;
+}
+
+.main_right_title_left{
+	font-size: 14px;
+	font-weight: bold;
+	float: left;
+}
+
+.main_right_title_right{
+	float: right;
+}
+
+.main_right_title_right a{
+	color: #3366CC;
+}
+
+.main_right_intersting_people_item{
+	width: 230px;
+	height: 50px;
+	padding-top: 20px;
+	position: relative;
+}
+
+.main_right_intersting_people_profile_image{
+	width: 50px;
+	height: 47px;
+	margin-right: 10px;
+	float: left;
+}
+
+.main_right_intersting_people_profile_name{
+	width: 108px;
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+	float: left;
+}
+
+.main_right_intersting_people_profile_name a{
+	color: #3366CC;
+}
+
+.main_right_intersting_people_profile_intro{
+	width: 108px;
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+	float: left;
+}
+
+.main_right_intersting_people_follow_button{
+	width: 50px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border: 1px solid #CCCCCC;
+	margin-left: 10px;
+	position: absolute;
+	top: 30px;
+	right: 0px;
+	float: right;
+}
+
+.main_right_intersting_people_follow_button a{
+	width: 50px;
+	height: 25px;
+	color: #666666;
+}
+
+.main_right_intersting_topic{
+	border-top: 2px solid #CCCCCC;
+	margin-top: 20px;
+	padding-top: 20px;
+}
+
+.intersting_topic_item{
+	width: 230px;
+	height: 20px;
+	margin-top: 10px;
+}
+
+.intersting_topic_item_left a{
+	width: 180px;
+	height: 20px;
+	color: #3366CC;
+	overflow: hidden;
+	float: left;
+}
+
+.intersting_topic_item_right{
+	height: 20px;
+	color: #666666;
+	float: right;
+}
+
+.main_right_intersting_people_profile_image img{
+	width:50px;
+	height:40px;
+}

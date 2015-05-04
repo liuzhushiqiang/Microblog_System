@@ -1,0 +1,46 @@
+#footer{
+	width: 960px;
+	margin: 0 auto;
+	background: #F8F8F8;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.footer_item{
+	width: 240px;
+	padding-top: 20px;
+	float: left;
+}
+
+.footer_item_topic{
+	width: 240px;
+	height: 25px;
+	line-height: 25px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.footer_item_link_item{
+	width: 240px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+}
+
+.copy_right_info{
+	width: 920px;
+	height: 30px;
+	line-height: 30px;
+	padding: 10px 20px;
+	color: #999999;
+	overflow: hidden;
+}
+
+.copy_right_info_left{
+	float: left;
+}
+
+.copy_right_info_right{
+	float: right;
+}

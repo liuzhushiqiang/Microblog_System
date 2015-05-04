@@ -1,0 +1,127 @@
+/*
+header 部分开始
+ */
+#header{height:40px; background: 
+	#4A5055;
+}
+	
+.header_content{width: 960px; height: 40px; margin:0 auto;}
+
+.header_content .header_nav a{
+	float:left;
+}
+
+.header_content .header_nav ul{
+	height: 40px; width:370px; float:left; margin-left: 32px;
+}
+
+.header_content .header_nav li{
+	height: 40px; padding: 0px 10px; line-height: 40px; 
+	font-size: 14px; color: #ffffff; float:left;
+	position: relative;
+}
+
+.header_right{
+	height: 40px; line-height: 40px;
+	float: right;
+}
+
+.search_text{
+	border-radius: 5px 5px 5px 5px;
+	width:163px; 
+	height: 19px;
+	border: 0px;
+	padding: 3px 5px;
+	color: #999999;
+	font-size: 12px;
+	margin-top: 7px;
+	float: left;
+}
+
+.search_button{
+	margin-left: -3px;	
+	margin-top: 7px; 
+	float:left;
+}
+
+.header_content .header_right ul{
+	height: 40px; margin-left: 32px; float:right;
+}
+
+.header_content .header_right li{
+	height: 40px; padding: 0px 10px; line-height: 40px; 
+	font-size: 12px; float:left; 
+	position: relative;
+}
+
+.header_content a{
+	text-decoration: none;
+	color:#ffffff;
+}
+
+.header_search{
+	float: left;
+}
+
+.header_current_page{
+	background: #414448;
+}
+
+.header_apps_list{
+	width: 400px; height:300px;
+	 display: none;  background: #ffffff;
+	 position: absolute;
+	 top: 40px;
+	 left: -50px;
+	 padding: 20px 20px;
+	 border-bottom: 1px solid gray;
+	 border-left: 1px solid gray;
+	 border-right: 1px solid gray;
+	 z-index: 100;
+}
+
+.header_message_list{
+	width: 80px; height: 180px;
+	display: none; background: #ffffff;
+	position: absolute;
+	top:40px;
+	right:0px;
+	 border-bottom: 1px solid gray;
+	 border-left: 1px solid gray;
+	 border-right: 1px solid gray;
+	z-index: 100;
+}
+
+.app_link{
+	width: 50px;
+	padding: 8px 15px;
+	float: left;
+}
+
+.header_content .header_apps_list a,
+.header_content .header_message_list a, 
+.header_content .header_account_list a{
+	text-align: center;
+	line-height: 30px;
+	color: #000000;
+	font-size: 12px;
+}
+
+.header_list_a_line{
+	padding-left: 10px;
+}
+
+.header_account_list{
+	width: 80px; height: 180px;
+	display: none; background: #ffffff;
+	position: absolute;
+	top:40px;
+	right:0px;
+	 border-bottom: 1px solid gray;
+	 border-left: 1px solid gray;
+	 border-right: 1px solid gray;
+	z-index: 100;
+}
+/*
+header 部分结束
+ */

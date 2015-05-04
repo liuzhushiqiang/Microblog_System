@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>Forget_Password</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="/css/reset_password.css">
+</head>
+<body>
+<div id="main_wrap">
+	<div id="reset_password">
+		Reset Password
+	</div>
+	<form action="/login/forgetpassword" method="post" id="reset_password_form">
+		<input type="text" id="email_address_input" name="email_address"/>
+		<input type="image" src="<?php echo $this->baseUrl;?>/image/resetPassword/sendButton.png" id="reset_password_button_image" name="reset_password_button"/>
+		<div id="reset_password_tip">Please enter you register E-mail, and we will send the password<span id="reset_password_info"><?php echo $this->reset_password_info?></span></div>
+		<div id="reset_password_tip">Tip: If you do not receive the email, please contact customer service for help</div>
+	</form>
+</div>
+</body>
+</html>
