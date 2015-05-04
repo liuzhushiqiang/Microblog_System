@@ -1,3 +1,7 @@
+body {
+	background: url("/image/login/login_background.jpg");
+}
+
 #top_content_wrap{
 	width: 720px;
 	margin:0px auto;
