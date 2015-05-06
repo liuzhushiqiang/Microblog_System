@@ -7,6 +7,8 @@ class TestController extends Zend_Controller_Action
 {
 	public function test1Action()
 	{
+		echo 'hook is ok';
+		exit;
 		$redis = new Predis\Client(array(
 			'scheme' => 'tcp',
 			'host' => '127.0.0.1',
