@@ -8,6 +8,8 @@ class TestController extends Zend_Controller_Action
 	{
 		//echo get_include_path();
 		//exit;
+		$test = new test();
+		exit;
 		$redis = new Predis\Client(array(
 			'scheme' => 'tcp',
 			'host' => '127.0.0.1',
