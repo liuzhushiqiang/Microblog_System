@@ -1,5 +1,5 @@
 <?php 
-require_once APPLICATION_PATH . '/../library/predis-1.0/src/Client.php';
+require_once APPLICATION_PATH . '/../library/predis-1.0/autoload.php';
 /**
 * TestController
 */
