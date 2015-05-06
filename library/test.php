@@ -5,7 +5,7 @@
 class test
 {
 	
-	function __construct(argument)
+	function __construct()
 	{
 		echo 'hello';
 	}
