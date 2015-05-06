@@ -1,5 +1,4 @@
 <?php 
-require_once 'predis/autoload.php';
 /**
 * TestController
 */
