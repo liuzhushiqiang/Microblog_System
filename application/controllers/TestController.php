@@ -1,5 +1,5 @@
 <?php 
-require_once APPLICATION_PATH . '/../library/test.php';
+require_once APPLICATION_PATH . '/../library/predis-1.0/src/Client.php';
 /**
 * TestController
 */
@@ -7,11 +7,6 @@ class TestController extends Zend_Controller_Action
 {
 	public function test1Action()
 	{
-		//echo get_include_path();
-		//exit;
-		$test = new test();
-		exit;
-
 		$redis = new Predis\Client(array(
 			'scheme' => 'tcp',
 			'host' => '127.0.0.1',
