@@ -11,6 +11,7 @@ class TestController extends Zend_Controller_Action
 		//exit;
 		$test = new test();
 		exit;
+		
 		$redis = new Predis\Client(array(
 			'scheme' => 'tcp',
 			'host' => '127.0.0.1',
