@@ -1,4 +1,5 @@
 <?php 
+require_once APPLICATION_PATH . '/../library/predis/Client.php';
 /**
 * TestController
 */
