@@ -1,5 +1,6 @@
 <?php 
 
+require_once APPLICATION_PATH . '/../library/predis-1.0/autoload.php';
 require_once 'BaseController.php';
 require_once APPLICATION_PATH . '/models/MbPost.php';
 
@@ -109,9 +110,25 @@ class WeiboController extends BaseController
 		$uid = $_SESSION['uid'];
 		$retId = isset($_GET['retId'])? $_GET['retId'] : null;
 		$sendTime = date('Y-m-d H-i-s');
+		/*
+		//这里是查数据库实现
 		$mbPost = new MbPost();
 		$updRes = $mbPost->sendWeibo($uid, $weiboText, $imgsPathServer, $retId, $sendTime);
+		*/
+		
+		//下面是redis的实现
+		$redis = new Predis\Client(array(
+			'host' => 127.0.0.1,
+			'post' => 6379
+			));
+		echo $redis->get('name');
+		exit;
+
 		$res = array('code' => 1, 'info' => '');
+
+		/*
+		把新发布的weibo送到客户端去显示
+		 */
 		if ($updRes) {
 			//$updRes是插入的最后一行的id值，在此表示插入成功
 			$res['info'] = $mbPost->idgetweibo($updRes);

@@ -1,12 +1,15 @@
 .messageHint {
 	width: 200px;
 	height: 45px;
+	text-align: center;
 	line-height: 45px;
 	background-color: #ffffff;
 	position: relative;
 	border: 1px solid #797979;
 	padding-left: 10px;
 	padding-right: 50px;
+	margin-right: 200px;
+	float: right;
 }
 
 .messageHint img {
@@ -15,4 +18,8 @@
 	position: absolute;
 	right: 0px;
 	top: 0px;
+}
+
+.messageHint a {
+	color: blue;
 }
