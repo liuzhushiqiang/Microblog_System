@@ -1,0 +1,18 @@
+.messageHint {
+	width: 200px;
+	height: 45px;
+	line-height: 45px;
+	background-color: #ffffff;
+	position: relative;
+	border: 1px solid #797979;
+	padding-left: 10px;
+	padding-right: 50px;
+}
+
+.messageHint img {
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
