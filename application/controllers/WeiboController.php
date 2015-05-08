@@ -13,7 +13,7 @@ class WeiboController extends BaseController
 {
 	public function indexgetweiboAction()
 	{
-		$pageSize = 5;
+		$pageSize = 10;
 		$curPage = $_GET['curPage'];
 		$userId = $_SESSION['uid'];
 		$mbPost = new MbPost();
