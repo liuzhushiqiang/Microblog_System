@@ -1,0 +1,13 @@
+#weiboHint {
+	width: 648px;
+	height: 30px;
+	background-color: #F3F3F3;
+	text-align: center;
+	line-height: 30px;
+	border: 1px solid #E5E5E5;
+	display: none;
+}
+
+#weiboHint a {
+	color: blue;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<link type="image/x-icon" rel="shortcut icon" href="<?php echo $this->baseUrl;?>/image/index/favicon.ico" />
+
+<link rel="stylesheet" type="text/css" href="/css/utils/window.css">
+<link rel="stylesheet" type="text/css" href="/css/index.css">
+<link rel="stylesheet" type="text/css" href="/css/utils/header.css">
+<link rel="stylesheet" type="text/css" href="/css/utils/mainRight.css">
+<link rel="stylesheet" type="text/css" href="/css/utils/footer.css">
+<link rel="stylesheet" type="text/css" href="/css/utils/showFollowing.css">
+
+<script type="text/javascript" src="/js/utils/jquery-2.1.3.js"></script>
+<script type="text/javascript" src="/js/utils/JSDump.js"></script>
+<script type="text/javascript" src="/js/utils/header.js"></script>
+<script type="text/javascript" src="/js/utils/mainRight.js"></script>
+</head>
+<body>
+<?php
+	require_once APPLICATION_PATH . '/views/scripts/utils/header.phtml';
+?>
+<div class="main_wrap" id="main_wrap">
+<div class="main_left" id="main_left">
+
+<div class="top_tab">
+<div class="tab_item_active">
+<a href="#">我关注的人</a>
+</div>
+</div>
+
+<?php 
+foreach ($this->res as $key => $value) {
+?>
+	<div id="infoWrap">
+		<a href="#"><div id="profile"><img src="<?php echo $value['profile_url']; ?>"/></div></a>
+		<div id="basicInfo">
+			<div id="infoLeft">
+				<a href="#"><div id="nickName"><?php echo $value['nickname']; ?></div></a>
+				<div id="genderAndAddr">
+					<img src="/image/index/maleIcon.png">
+					<span id="addr"><?php echo $value['address']; ?></span>
+				</div>
+				<div id="intro">个人简介:<?php echo $value['introduction']; ?></div>
+				<div id="friendOperation">
+					<a href="#"><div id="following">已关注</div></a>
+					<a href="#"><div id="sendPriMes">发私信</div></a>
+					<a href="#"><div id="more">更多</div></a>
+				</div>
+			</div>
+		</div>
+		<div id="clear"></div>
+	</div>
+<?php
+}
+?>
+
+</div>
+
+<?php 
+	require_once APPLICATION_PATH . '/views/scripts/utils/mainRight.phtml';
+?>
+<div class="clear"></div>
+</div>
+<?php 
+	require_once APPLICATION_PATH . '/views/scripts/utils/footer.phtml';
+?>
+</body>
+</html>

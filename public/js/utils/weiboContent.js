@@ -1,9 +1,9 @@
 //这个函数依赖于showOneWeibo.js
-function showWeibo () {
+function showWeibo (curPage) {
 		$.ajax({
 			url: "/weibo/indexgetweibo",
 			type: "get",
-			data: {"curPage": 1},
+			data: {"curPage": curPage},
 			dataType: "json",	
 			success: function (data) {
 			$.each(data, function (newWeiboKey, newWeiboValue) {
@@ -17,5 +17,5 @@ function showWeibo () {
 }
 
 $("document").ready(function () {
-	showWeibo();
+	showWeibo(1);
 })

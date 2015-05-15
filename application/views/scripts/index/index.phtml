@@ -12,6 +12,8 @@
 <link rel="stylesheet" type="text/css" href="/css/utils/sendWeibo.css">
 <link rel="stylesheet" type="text/css" href="/css/utils/footer.css">
 <link rel="stylesheet" type="text/css" href="/css/utils/messageHint.css">
+<link rel="stylesheet" type="text/css" href="/css/utils/weiboHint.css">
+<link rel="stylesheet" type="text/css" href="/css/utils/jquery.shCircleLoader.css">
 
 <script type="text/javascript" src="/js/utils/jquery-2.1.3.js"></script>
 <script type="text/javascript" src="/js/utils/JSDump.js"></script>
@@ -22,6 +24,8 @@
 <script type="text/javascript" src="/js/utils/weiboContent.js"></script>
 <script type="text/javascript" src="/js/plupload/plupload.full.min.js"></script>
 <script type="text/javascript" src="/js/utils/sendWeibo.js"></script>
+<script type="text/javascript" src="/js/utils/weiboHint.js"></script>
+<script type="text/javascript" src="/js/utils/jquery.shCircleLoader.js"></script>
 </head>
 <body>
 <?php
@@ -49,10 +53,28 @@
 </div>
 </div>
 
-<div id="weiboHint"><a href="#">有1条新微博</a></div>
+<?php
+	require_once APPLICATION_PATH . '/views/scripts/utils/weiboHint.phtml';
+?>
+
 <?php 
 	require_once APPLICATION_PATH . '/views/scripts/utils/weiboContent.phtml';
 ?>
+
+<script type="text/javascript">
+$(document).ready(
+	function () {
+		$('#loader').shCircleLoader(); 
+		$(window).scroll(function () {
+		    if ($(document).scrollTop() + $(window).height() >= $(document).height()) {
+		        showWeibo($(".new_weibo").length / 10 + 1);
+		    }
+		});
+	}
+)
+</script>
+<div id="loader"></div>
+
 </div>
 
 <?php 

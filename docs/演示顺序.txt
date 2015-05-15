@@ -1,0 +1,7 @@
+1.usb共享网络
+2.启动centos虚机
+2.1 关掉防火墙
+3.启动redis-server
+4.初始化redis数据 centos.testphp.com/initRedisData/index.php
+5.运行后台守护进程 http://centos.testphp.com/serverPushDaemon.php
+6.分别在chrome和360极速开两个网页测试

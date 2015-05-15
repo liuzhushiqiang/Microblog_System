@@ -110,32 +110,34 @@ class WeiboController extends BaseController
 		$uid = $_SESSION['uid'];
 		$retId = isset($_GET['retId'])? $_GET['retId'] : null;
 		$sendTime = date('Y-m-d H-i-s');
-		/*
-		//这里是查数据库实现
-		$mbPost = new MbPost();
-		$updRes = $mbPost->sendWeibo($uid, $weiboText, $imgsPathServer, $retId, $sendTime);
-		*/
 		
 		//下面是redis的实现
-		$redis = new Predis\Client(array(
-			'host' => 127.0.0.1,
-			'post' => 6379
-			));
-		echo $redis->get('name');
-		exit;
-
-		$res = array('code' => 1, 'info' => '');
+		$redis = new Predis\Client(array('host' => '127.0.0.1', 'post' => 6379));
+		//事务处理，保持weibo:index的一致性
+		$weiboHashKey;
+		$nickname = $_SESSION['nickName'];
+		$profile_url = $redis->hget('user:' . $uid, 'profile_url');
+		while (!($redis->watch('weibo:index') && ($keyTmp = $redis->get('weibo:index')) && $redis->multi() && $redis->hMset($weiboHashKey = ('weibo:' . $keyTmp), array('content' => $weiboText, 'images_url' => $imgsPathServer, 'retransmission_id' => $retId, 'create_time' => $sendTime, 'uid' => $uid, 'id' => $keyTmp, 'nickname' => $nickname, 'profile_url' => $profile_url)) && $redis->lPush('weiboTask', 'weibo:' . $keyTmp) && $redis->exec())) {
+			usleep(5000);
+		};
+		$redis->incr('weibo:index');
 
 		/*
 		把新发布的weibo送到客户端去显示
-		 */
-		if ($updRes) {
-			//$updRes是插入的最后一行的id值，在此表示插入成功
-			$res['info'] = $mbPost->idgetweibo($updRes);
-		} else {
-			$res['code'] = 0;
-			$res['info'] = '插入失败';
-		}
+		 */	
+		$res = array('code' => 1, 'info' => '');
+		$res['info'] = array('content' => $weiboText, 'images_url' => $imgsPathServer, 'retransmission_id' => $retId, 'create_time' => $sendTime, 'uid' => $uid, 'nickname' => $nickname, 'profile_url' => $profile_url);
 		$this->view->res = json_encode($res);
+	}
+
+	public function pushweiboAction()
+	{
+		require_once APPLICATION_PATH . '/../library/predis-1.0/autoload.php';
+		$redis = new Predis\Client(array('host' => '127.0.0.1', 'post' => 6379));
+		$res = null;
+		if (($tmp = $redis->brPop('push:user:' . $_SESSION['uid'], 0))) {
+			$res = $tmp;
+		}
+		$this->view->res = $res;
 	}
 }

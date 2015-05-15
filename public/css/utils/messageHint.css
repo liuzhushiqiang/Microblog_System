@@ -10,6 +10,7 @@
 	padding-right: 50px;
 	margin-right: 200px;
 	float: right;
+	display: none;
 }
 
 .messageHint img {

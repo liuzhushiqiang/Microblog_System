@@ -1,0 +1,126 @@
+/*全局控制*/
+body{margin:0; padding:0; font-size:12px; color: #333333;  
+	font-family:"Arial","宋体"; background: #ECECEC;}
+
+/*重置浏览器默认样式*/
+h1, h2, h3, p, ul, li, dl, dt, dd, img, input, a{margin:0; 
+padding:0; list-style:none; text-decoration: none; 
+color: #000000;}
+
+#infoWrap {
+	width: 648px;
+	height: 180px;
+	background: #FFFFFF;
+	border-bottom: 1px solid gray;
+}
+
+#profile img {
+	width: 48px;
+	height: 48px;
+	padding-top: 25px;
+}
+
+#profile {
+	width: 48px;
+	height: 48px;
+	float: left;
+}
+
+#basicInfo {
+	width: 600px;
+	height: 180px;
+	float: right;
+}
+
+#infoLeft {
+	width: 500px;
+	height: 150px;
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	padding-right: 20px;
+	position: relative;
+	float: left;
+}
+
+#nickName {
+	height: 25px;
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: bold;
+	color: #3366CC;
+}
+
+#genderAndAddr{
+	width: 500px;
+	height: 20px;
+	margin-top: 10px;
+}
+
+#genderAndAddr img {
+	width: 20px;
+	height: 20px;
+	float: left;
+}
+
+
+#addr {
+	width: 200px;
+	height: 20px;
+	line-height: 20px;
+	margin-left: 5px;
+	float: left;
+}
+
+#intro{
+	width: 500px;
+	height: 20px;
+	line-height: 20px;
+	margin-top: 5px;
+}
+
+#friendOperation {
+	width: 200px;
+	height: 23px;
+	position: absolute;
+	left: 20px;
+	bottom: 10px;
+}
+
+#following {
+	height: 21px;
+	color: #999999;
+	line-height: 23px;
+	text-align: center;
+	border: 1px solid #999999;
+	background-color: #FCFCFC;
+	padding-right: 15px;
+	padding-left: 15px;
+	float: left;
+}
+
+#sendPriMes {
+	height: 21px;
+	color: #999999;
+	line-height: 23px;
+	text-align: center;
+	border: 1px solid #999999;
+	margin-left: 10px;
+	background-color: #FCFCFC;
+	padding-right: 10px;
+	padding-left: 10px;
+	float: left;
+}
+
+#more {
+	height: 23px;
+	text-align: center;
+	line-height: 23px;
+	color: #999999;
+	margin-left: 20px;
+	float: left;
+}
+
+#clear {
+	clear:both;
+}
