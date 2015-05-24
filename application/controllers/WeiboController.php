@@ -135,7 +135,8 @@ class WeiboController extends BaseController
 		require_once APPLICATION_PATH . '/../library/predis-1.0/autoload.php';
 		$redis = new Predis\Client(array('host' => '127.0.0.1', 'post' => 6379));
 		$res = null;
-		if (($tmp = $redis->brPop('push:user:' . $_SESSION['uid'], 0))) {
+		//检查是否有内容，然后马上返回，非阻塞rPop
+		if (($tmp = $redis->rPop('push:user:' . $_SESSION['uid']))) {
 			$res = $tmp;
 		}
 		$this->view->res = $res;

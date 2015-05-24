@@ -3,5 +3,5 @@
 2.1 关掉防火墙
 3.启动redis-server
 4.初始化redis数据 centos.testphp.com/initRedisData/index.php
-5.运行后台守护进程 http://centos.testphp.com/serverPushDaemon.php
+5.运行后台守护进程 http://centos.testphp.com/serverPush/serverPushDaemon.php
 6.分别在chrome和360极速开两个网页测试

@@ -7,12 +7,13 @@ $(document).ready(function () {
 			"dataType": 'json',
 			"success": function (data) {
 				//显示一条微博（data是html字符串）
+				//当data不为null的时候才需要显示data的内容
 				if (data){
 					$("#weiboHint").css("display", "block");
 					$("#weiboHint").click(function () {
 						$("#content").prepend(showOneWeibo(data));
 						$("#weiboHint").css("display", "none");
-					})
+					});
 				}
 				//setTimeout(function () {connect();}, 5000);
 			},
